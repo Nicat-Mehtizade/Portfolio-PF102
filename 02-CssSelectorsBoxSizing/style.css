@@ -1,0 +1,70 @@
+/* body {
+    background-color: red;
+    } */
+
+/* p {
+        color: red; ---Bütün p elementlərini seçir
+    } */
+
+/* h2 {
+        color: red; --- Bütün h2 elementlərini seçir
+    } */
+
+/* .Header {
+        color: red; ---Class-ı Header olan bütün elementləri seçir
+    } */
+
+/* #Info {
+        color: red; ---İd-si İnfo olan bütün elementləri seçir
+    } */
+
+/* p,h1 {
+  color: red; ---Bütün p və h1 elementlərini seçir
+} */
+
+/* div p {
+    color: red; ---div tagındakı bütün p element elementlərini seçir
+} */
+
+/* a.navItem {
+  color: red; ---Class-ı navItem olan a elementlərini seçir
+} */
+
+/* h1,h2,p {
+    color: red; ---Bütün h1 h2 ve p elementlərin seçir
+} */
+
+/* div > p {
+  color: red; ---Parenti div olan bütün p ləri seçir
+} */
+
+/* div+p {
+    color: red; --- Div tagından sonra gelen ilk p elementlərini seçir
+} */
+
+/* div ~ p {
+    color: red; ---Div tagından sonrakı bütün p elementlərini seçir
+} */
+
+/* div>p:first-child {
+    color: red; ---Div tagında ilk p elementini seçir
+} */
+
+/* div>p:last-child {
+    color: red; ---Div tagında son p elementini seçir
+} */
+
+/* div>p:nth-child(3) {
+    color: red; ---Divin 3 cü p elementini seçir
+} */
+
+/* div>nav>a:nth-child(2) {
+    color: red; ---Div tagının içindeki nav tagının içinde olan a elementinin 3-cüsünü seçir
+} */
+
+/* div>ul>li:last-child {
+    color: red; ---Div tagında olan ul-nin içindeki li-nin en sonuncusunu seçir
+} */
+
+
+

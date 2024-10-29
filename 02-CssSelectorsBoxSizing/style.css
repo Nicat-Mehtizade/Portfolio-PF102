@@ -66,5 +66,21 @@
     color: red; ---Div tagında olan ul-nin içindeki li-nin en sonuncusunu seçir
 } */
 
+/* button:hover {
+    background-color: transparent; 
+} */
+
+/* p:first-of-type {
+    color: red;
+} */
+
+/* a:last-of-type {
+    color: red;
+} */
+
+/* p::first-letter {
+    color: red;
+} */
+
 
 

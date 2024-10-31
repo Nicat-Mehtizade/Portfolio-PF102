@@ -1,0 +1,21 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.headerBar {
+  background-color: #2C3E50;
+
+}
+
+.container {
+  width: 1425px;
+  height: 104px;
+}
+
+.logo {
+  color: white;
+  display: flex;
+  text-align: ;
+}

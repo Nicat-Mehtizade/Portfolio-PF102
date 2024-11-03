@@ -1,22 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="headerBar">
-        <div class="container">
-            <div class="logo">START BOOTSTRAP</div>
-            <div class="navBar">
-                <a class="navItem" href="">PORTFOLIO</a>
-                <a class="navItem" href="">ABOUT</a>
-                <a class="navItem" href="">CONTACT</a>
-            </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="headerBar">
+      <div class="container">
+        <a class="logo" href="#START">START BOOTSTRAP</a>
+        <div class="navBox">
+          <a class="navItem" href="#PORTFOLIO">PORTFOLIO</a>
+          <a class="navItem" href="#ABOUT">ABOUT</a>
+          <a class="navItem" href="#CONTACT">CONTACT</a>
         </div>
-        
-    </header>
-</body>
+      </div>
+    </div>
+    <div class="main" id="START">
+      <div class="container">
+        <img class="mainImg" src="./images/avataaars.svg" alt="" />
+        <h1 class="mainName">START BOOTSTRAP</h1>
+        <div class="star">
+          <div class="line"></div>
+          <img src="./images/Vector.svg" alt="" />
+          <div class="line"></div>
+        </div>
+        <h3 class="mainDescription">
+          Graphic Artist - Web Designer - Illustrator
+        </h3>
+      </div>
+    </div>
+    <div class="imgBox" id="PORTFOLIO">
+      <h1 class="imgName">PORTFOLIO</h1>
+      <div class="blackStar">
+        <div class="line2"></div>
+        <img class="blackStr" src="./images/black star.svg" alt="" />
+        <div class="line2"></div>
+      </div>
+      <div class="sectionFirstLine">
+        <img class="firstLineImg" src="./images/photo 1.svg" alt="" />
+        <img class="firstLineImg" src="./images/photo 2.svg" alt="" />
+        <img class="firstLineImg" src="./images/photo 3.svg" alt="" />
+      </div>
+      <div class="sectionSecondLine">
+        <img class="secondLineImg" src="./images/photo 4.svg" alt="" />
+        <img class="secondLineImg" src="./images/photo 5.svg" alt="" />
+        <img class="secondLineImg" src="./images/photo 6.svg" alt="" />
+      </div>
+    </div>
+    <div class="about" id="ABOUT">
+      <div class="container">
+        <h1 class="aboutHeader">ABOUT</h1>
+        <div class="aboutStar">
+          <div class="line"></div>
+          <img src="./images/Vector.svg" alt="" />
+          <div class="line"></div>
+        </div>
+        <div class="aboutText">
+          <p class="aboutDescription">
+            Freelancer is a free bootstrap theme created by Start Bootstrap. The
+            download includes the complete source files including HTML, CSS, and
+            JavaScript as well as optional SASS stylesheets for easy
+            customization.
+          </p>
+          <p class="aboutDescription">
+            You can create your own custom avatar for the masthead, change the
+            icon in the dividers, and add your email address to the contact form
+            to make it fully functional!
+          </p>
+        </div>
+        <div class="btnBox">
+          <button class="aboutButton">
+            <i class="fa-solid fa-download"></i>FreeDownload
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="contact" id="CONTACT">
+      <h1 class="contactText">CONTACT ME</h1>
+      <div class="blackStr">
+        <div class="line3"></div>
+        <img class="blackStr" src="./images/black star.svg" alt="" />
+        <div class="line3"></div>
+      </div>
+      <form action="">
+        <div class="input-container" data-error="A name is required.">
+          <input
+            type="text"
+            name="Name"
+            id="Name"
+            required
+            placeholder="Full name"
+          />
+        </div>
+        <div class="input-container">
+          <input
+            type="email"
+            name="Email"
+            id="Email"
+            required
+            placeholder="Email address"
+          />
+        </div>
+        <div class="input-container">
+          <input
+            type="tel"
+            name="Phone"
+            id="Phone"
+            required
+            placeholder="Phone number"
+          />
+        </div>
+        <textarea
+          rows="4"
+          cols="50"
+          name=""
+          id=""
+          placeholder="Message"
+        ></textarea>
+        <button class="contactBtn">Send</button>
+      </form>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="section1">
+          <h3>LOCATION</h3>
+          <p>2215 John Daniel Drive.</p>
+          <p>Clark, MO 65243</p>
+        </div>
+        <div class="section2">
+          <h3>AROUND THE WEB</h3>
+          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href=""><i class="fa-brands fa-dribbble"></i></a>
+        </div>
+        <div class="section3">
+          <h3>ABOUT FREELANCER</h3>
+            <p> Freelance is a free to use, MIT licensed</p>
+            <p class="text2">Bootstrap theme created by <a href=""> Start Bootstrap.</a></p>
+           
+          </div>
+        </div>
+    </footer>
+    <div class="bottom">
+        <div class="container">
+            <p>Copyright © Your Website 2023</p>
+        </div>
+    </div>
+  </body>
 </html>

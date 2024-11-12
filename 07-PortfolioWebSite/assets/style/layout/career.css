@@ -214,6 +214,55 @@ html {
     right: 145px;
   }
 }
+@media screen and (max-width: 500px){
+  .careerbackground{
+    height: 1000px;
+  }
+  .careerMain{
+    img{
+display: none;
+    }
+  }
+  .word1 {
+    font-size: 15px;
+    bottom: 300px;
+    right: 75px;
+    border: 1px solid white;
+    width: 150px;
+  }
+  .word2{
+    font-size: 8px;
+    width: 150px;
+    right: 75px;
+    border: 1px solid white;
+    bottom: 300px;
+    text-align: left;
+
+  }
+  .word3{
+    font-size: 8px;
+    width: 150px;
+    right: 75px;
+    bottom:300px;
+    border: 1px solid white;
+
+  }
+  .word4{
+    font-size: 8px;
+    width: 150px;
+    right: 75px;
+    bottom: 300px;
+    border: 1px solid white;
+  }
+  .word5{
+    font-size: 8px;
+    width: 150px;
+    right: 75px;
+    border: 1px solid white;
+    bottom: 300px;
+
+  }
+}
 
 footer {
   background-color: #0d0d0d;
@@ -294,5 +343,27 @@ footer {
 @media screen and (max-width: 768px) {
   .footerDescription {
     width: 440px;
+  }
+}
+@media screen and (max-width:450px){
+  .footerDescription{
+    font-size: 10px;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width:320px){
+  .footerLogo{
+    gap:10px
+  }
+  .bottom{
+    font-size: 10px;
+  }
+  .footerName{
+    font-size: 15px;
+  }
+
+  .footerDescription{
+    width: 200px;
   }
 }

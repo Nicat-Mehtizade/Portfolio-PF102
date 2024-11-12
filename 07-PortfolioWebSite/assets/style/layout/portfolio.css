@@ -275,6 +275,42 @@ html {
     line-height: 110px;
   }
 }
+@media screen and (max-width: 480px){
+  .wrapper {
+    max-height: 300px;
+    max-width: 350px;
+  }
+
+  .wrapper .portfolioItem {
+    min-width: 150px;
+    height: 160px;
+    line-height: 100px;
+  }
+
+  .portfolioMain{
+    h1{
+      font-size: 40px;
+    }
+  }
+}
+@media screen and (max-width: 350px){
+  .wrapper {
+    max-height: 250px;
+    max-width: 250px;
+  }
+
+  .wrapper .portfolioItem {
+    min-width: 120px;
+    height: 130px;
+    line-height: 100px;
+  }
+
+  .portfolioMain{
+    h1{
+      font-size: 30px;
+    }
+  }
+}
 
 footer {
   background-color: #0d0d0d;
@@ -354,5 +390,28 @@ footer {
 @media screen and (max-width: 768px) {
   .footerDescription {
     width: 440px;
+  }
+}
+
+@media screen and (max-width:450px){
+  .footerDescription{
+    font-size: 10px;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width:320px){
+  .footerLogo{
+    gap:10px
+  }
+  .bottom{
+    font-size: 10px;
+  }
+  .footerName{
+    font-size: 15px;
+  }
+
+  .footerDescription{
+    width: 200px;
   }
 }

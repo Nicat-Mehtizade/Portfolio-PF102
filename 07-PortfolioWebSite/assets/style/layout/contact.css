@@ -249,6 +249,42 @@ html{
       width: 450px;
     }
   }
+  @media screen and (max-width: 460px){
+    .contactLeftSide{
+      font-size: 10px;
+      gap: 25px;
+      width: 300px;
+    }
+  
+    .contactheader{
+      font-size: 30px;
+    }
+    .contactRightSide{
+      /* border: 1px solid red; */
+      width: 300px;
+      input{
+        width: 250px;
+       
+      }
+    }
+  }
+  @media screen and (max-width: 310px){
+    .contactRightSide{
+      /* border: 1px solid red; */
+      width: 250px;
+      input{
+        width: 250px;
+       
+      }
+    }
+    .contactLeftSide{
+      gap: 20px;
+      width: 200px;
+      p{
+        font-size: 15px
+      }
+    }
+  }
 
   footer{
     background-color: #0d0d0d;
@@ -332,6 +368,29 @@ html{
   @media screen and (max-width:768px){
     .footerDescription{
       width: 440px;
+    }
+  }
+
+  @media screen and (max-width:450px){
+    .footerDescription{
+      font-size: 10px;
+      width: 300px;
+    }
+  }
+
+  @media screen and (max-width:320px){
+    .footerLogo{
+      gap:10px
+    }
+    .bottom{
+      font-size: 10px;
+    }
+    .footerName{
+      font-size: 15px;
+    }
+
+    .footerDescription{
+      width: 200px;
     }
   }
   

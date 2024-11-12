@@ -83,3 +83,25 @@ footer{
     }
   }
   
+  @media screen and (max-width:450px){
+    .footerDescription{
+      font-size: 10px;
+      width: 300px;
+    }
+  }
+
+  @media screen and (max-width:320px){
+    .footerLogo{
+      gap:10px
+    }
+    .bottom{
+      font-size: 10px;
+    }
+    .footerName{
+      font-size: 15px;
+    }
+
+    .footerDescription{
+      width: 200px;
+    }
+  }

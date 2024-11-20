@@ -18,10 +18,12 @@
   @include flexBox(column);
   gap: 14px;
   // border: 1px solid red
+  
 }
 footer {
   background-color: #f0f0f0;
   // position: relative;
+  
 }
 .mail {
   @include flexBox(row, flex-start);
@@ -64,6 +66,7 @@ footer {
 .iconsBox {
   @include flexBox(row, flex-start);
   gap: 12px;
+  
   .fa-brands {
     border: 1px solid #00000033;
     border-radius: 50%;
@@ -84,6 +87,7 @@ footer {
 }
 
 .iconsItem {
+  
   @include flexBox(column, flex-start, start);
   gap: 26px;
   // border: 1px solid red;
@@ -99,6 +103,7 @@ footer {
 }
 
 .bottom {
+  
   background-color: #f0f0f0;
   @include flexBox(row, space-between, center);
   h1 {
@@ -108,13 +113,14 @@ footer {
 }
 .bottomLogos {
   @include flexBox;
-  // border: 1px solid red;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 1000px) {
   .contact {
     @include flexBox(column, center, center);
     gap: 32px;
     padding: 15px;
+    
     h1 {
       @include integral-typagrapghy(900, 32px, 35px);
     }
@@ -126,10 +132,10 @@ footer {
     }
   }
 
-  .footerbtn{
+  .footerbtn {
     white-space: nowrap;
-    padding: 11.5px 60.5px ;
-    @include satoshi-typography(500,14px,18.9px);
+    padding: 11.5px 60.5px;
+    @include satoshi-typography(500, 14px, 18.9px);
   }
 
   .linksBox {
@@ -142,7 +148,9 @@ footer {
     }
   }
   .bottom {
-    @include flexBox(column,center);
+    @include flexBox(column, center);
   }
-  
+  .bottomLogos {
+    flex-wrap: wrap;
+  }
 }

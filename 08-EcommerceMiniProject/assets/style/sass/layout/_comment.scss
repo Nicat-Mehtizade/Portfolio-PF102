@@ -1,9 +1,11 @@
 .commentMain {
   @include flexBox(column);
   margin-bottom: 180px;
+  
 }
 
 .commentName {
+  
   @include flexBox(row, space-between);
   // border: 1px solid red;
   width: 100%;
@@ -19,6 +21,7 @@
 }
 
 .commentBar {
+  
   @include flexBox;
   // border: 1px solid red;
   gap: 20px;
@@ -29,6 +32,7 @@
 }
 
 .commentItem {
+  
   // border: 1px solid red;
   padding: 28px 32px 28px 32px;
   border: 1px solid #0000001a;

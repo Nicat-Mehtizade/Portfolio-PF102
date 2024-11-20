@@ -1,6 +1,7 @@
 .categoryfolderlineMain{
     @include flexBox(row,flex-start,);
     gap: 12px;
+    margin-bottom: 24px;
     p{
         @include satoshi-typography(400,16px,21.6px);
     }
@@ -14,7 +15,295 @@
         color: #00000099;
     }
 }
-
+.categoryMain{
+    @include flexBox(row,space-between,start);
+    gap: 20px
+}
 .categoryFilter{
-    @include flexBox(column,center,start)
+    @include flexBox(column,center,start);
+    border: 1px solid #0000001A;
+    width: 25%;
+    padding: 20px 24px;
+border-radius: 20px
+}
+
+.filterTop{
+    @include satoshi-typography(700,20px,27px);
+    @include flexBox(row,space-between);
+    width: 100%;
+    margin-bottom: 24px;
+    .filterconfig{
+        color: #00000066;
+    }
+}
+
+.filterMiddleLine{
+    height: 2px;
+    width: 100%;
+    background-color: #0000001A;
+    margin-bottom: 24px;
+}
+
+.filterCategory{
+    @include flexBox(column,center,start);
+    width: 100%;
+    // border: 1px solid red;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.filterCategoryItem{   
+width: 100%;
+    @include flexBox(row,space-between);
+    p{
+        @include satoshi-typography(400,16px,21.6px);
+        color: #00000099;
+    }
+}
+
+.price{
+    width: 100%;
+    margin-bottom: 24px;
+    .priceTop{
+        @include flexBox(row,space-between);
+        width: 100%;
+        h1{
+            @include satoshi-typography(700,20px,27px);
+        }
+    }
+}
+
+.colorBar{
+    width: 100%;
+    @include flexBox(column);
+    .colorTop{
+        margin-bottom: 20px;
+    width: 100%;
+        @include flexBox(row,space-between);
+        h1{
+            @include satoshi-typography(700,20px,27px);
+        }
+    }
+}
+.colors{
+    @include flexBox(row,flex-start);
+    // border: 1px solid red;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 15.5px;
+    margin-bottom: 24px;
+}
+.colorItem{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+}
+
+.green{
+    background-color: #00C12B;
+    border: 2px solid #00000033;
+}
+
+.red{
+    background-color: #F50606;
+    border: 1px solid #00000033;
+}
+
+.yellow{
+    background-color: #F5DD06;
+    border: 1px solid #00000033;
+}
+
+.orange{
+    background-color: #F57906;
+    border: 1px solid #00000033;
+}
+
+.lightblue{
+    background-color: #06CAF5;
+    border: 1px solid #00000033;
+}
+
+.blue{
+    background-color: #063AF5;
+    border: 1px solid #00000033;
+    @include flexBox;
+}
+
+.purple{
+    background-color: #7D06F5;
+    border: 1px solid #00000033;
+}
+
+.pink{
+    background-color: #F506A4;
+    border: 1px solid #00000033;
+}
+
+.white{
+    background-color: $secondary-color;
+    border: 1px solid #00000033;
+}
+
+.black{
+    background-color: $primary-color;
+    border: 1px solid #00000033;
+}
+.size{
+    width: 100%;
+    // border: 1px solid red;
+    @include flexBox(column,flex-start,start);
+}
+    .sizeTop{
+        margin-bottom: 20px;
+        width: 100%;
+        @include flexBox(row,space-between);
+        h1{
+            @include satoshi-typography(700,20px,27px);
+        }
+    }
+
+    .sizes{
+        flex-wrap: wrap;
+        @include flexBox(row,flex-start);
+        gap: 8px;
+        margin-bottom: 24px;
+        .sizeItem{
+            padding: 10px 20px;
+            background-color: #F0F0F0;
+            @include satoshi-typography(400,16px,18.9px);
+            color: #00000099;
+            border-radius: 62px;
+        }
+        .black{
+            background-color: $primary-color;
+            color: $secondary-color;
+        }
+    }
+.dressstylesec{
+    width: 100%;
+    @include flexBox(column,center,start);
+    .dressstylesecTop{
+    width: 100%;
+    margin-bottom: 20px;
+        @include flexBox(row,space-between,center);
+        h1{
+            @include satoshi-typography(700,20px,27px);
+
+        }
+    }
+}
+
+
+.categoryScreen{
+    width: 75%;
+}
+.categoryScreenTop{
+    @include flexBox(row,space-between);
+    h1{
+        @include satoshi-typography(700,32px,43.2px);
+    }
+}
+
+.categoryTopRightSide{
+    @include flexBox;
+    gap: 12px;
+}
+.toprightsideLeftPart{
+    @include satoshi-typography(400,16px,21.6px);
+color: #00000099
+}
+
+.categoryconfiguration{
+        @include flexBox;
+        background-color: #f0f0f0;
+        border-radius: 62px;
+        padding: 12px;
+        display: none
+}
+.toprightsideRightPart{
+    @include flexBox;
+    gap: 4px;
+    p{
+        @include satoshi-typography(400,16px,21.6px);
+        color: #00000099
+    }
+    h3{
+        @include satoshi-typography(500,16px,21.6px)
+    }
+}
+
+.categoryItemBox{
+    @include flexBox(column,flex-start,start);
+    // flex-wrap: wrap;
+    gap: 7px;
+    // border: 1px solid red;
+}
+
+.itemBox1{
+    @include flexBox(row,flex-start);
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+
+
+.itemBox3{
+    @include flexBox(row,flex-start);
+    gap: 6px;
+    margin-bottom: 32px;
+}
+
+@media screen and (max-width:1220px){
+    .categoryFilter{
+        display: none;
+    }
+    .itemBox3{
+        display: none;
+    }
+.categoryPhoto{
+    width: 172px;
+    height: 174px
+}
+    .toprightsideLeftPart{
+        @include satoshi-typography(400,14px,18.9px);
+    }
+.categoryScreenTop{
+    h1{
+        @include satoshi-typography(700,24px,32.4px);
+    }
+}
+    .toprightsideRightPart{
+        display: none;
+    }
+
+    .categoryconfiguration{
+        display: block !important;
+    }
+}
+
+.categoryPageNumber{
+    width: 100%;
+    // border: 1px solid red;
+    @include flexBox(row,space-between);
+    margin-bottom: 150px
+}
+
+.pagenumber{
+    @include flexBox;
+    gap: 33px;
+   
+    .pagenumberItem{
+        @include satoshi-typography(500,14px,20px);
+        color: #00000080;
+    }
+}
+
+.pagenumber1{
+    color: $primary-color;
+    padding: 10px 17px;
+    border-radius: 8px;
+    @include satoshi-typography(500,14px,20px);
+background-color: #0000000F;
 }

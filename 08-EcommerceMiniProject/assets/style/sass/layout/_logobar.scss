@@ -1,0 +1,27 @@
+.logoBar{
+    background-color: $primary-color;
+    margin-bottom: 72px;
+}
+
+.logoBarMain{
+    @include flexBox;
+    gap: 106px;
+    padding: 42px 0px;
+}
+
+@media screen and (max-width:1242px){
+    .logoBarMain{
+        gap:20px
+    }
+}
+
+@media screen and (max-width:900px){
+.logoBarMain{
+    img{
+        width: 80px;
+        height: 20px;
+    }
+    gap: 30px;
+    flex-wrap: wrap;
+}
+}

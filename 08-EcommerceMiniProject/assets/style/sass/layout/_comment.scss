@@ -1,0 +1,101 @@
+.commentMain {
+  @include flexBox(column);
+  margin-bottom: 180px;
+}
+
+.commentName {
+  @include flexBox(row, space-between);
+  // border: 1px solid red;
+  width: 100%;
+  margin-bottom: 40px;
+  h1 {
+    @include integral-typagrapghy(900, 48px, 57.6px);
+  }
+
+  .arrow {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.commentBar {
+  @include flexBox;
+  // border: 1px solid red;
+  gap: 20px;
+  p{
+    @include satoshi-typography(400,16px,22px);
+    color:#00000099;
+  }
+}
+
+.commentItem {
+  // border: 1px solid red;
+  padding: 28px 32px 28px 32px;
+  border: 1px solid #0000001a;
+  border-radius: 20px;
+  .commentCheck{
+    @include flexBox(row,flex-start,center);
+    gap: 4px;
+    margin-bottom: 12px;
+    h3{
+      @include satoshi-typography(700,20px,22px);
+    }
+  }
+  
+}
+
+.commentItem2 {
+  // border: 1px solid red;
+  padding: 28px 32px 28px 32px;
+  border: 1px solid #0000001a;
+  border-radius: 20px;
+  .commentCheck2{
+    @include flexBox(row,flex-start,center);
+    gap: 4px;
+    margin-bottom: 12px;
+    h3{
+      @include satoshi-typography(700,20px,22px);
+
+    }
+  }
+}
+
+.commentItem3 {
+  // border: 1px solid red;
+  padding: 28px 32px 28px 32px;
+  border: 1px solid #0000001a;
+  border-radius: 20px;
+  .commentCheck3{
+    @include flexBox(row,flex-start,center);
+    gap: 4px;
+    margin-bottom: 12px;
+    h3{
+      @include satoshi-typography(700,20px,22px);
+
+    }
+  }
+}
+
+.commentStar{
+  @include flexBox(row,flex-start,center);
+  gap: 6.49px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width:900px){
+  .commentItem2{
+    display: none;
+  }
+  .commentItem3{
+    display: none;
+  }
+  
+  .commentName{
+    // border: 1px solid red;
+    @include flexBox(row,center,center);
+    
+    h1{
+      @include integral-typagrapghy(900,32px,36px);
+    }
+  }
+}

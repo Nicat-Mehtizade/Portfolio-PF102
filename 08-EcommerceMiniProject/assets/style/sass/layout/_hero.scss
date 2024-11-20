@@ -1,0 +1,143 @@
+// .heroBackground {
+// //   background-image: url("../../../images/static/Rectangle2.png");
+//   width: 100%;
+//   height: 100%;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   @include flexBox(row,space-between);
+//   // height:663px;
+//   border: 1px solid red;
+// }
+.heroMain{
+  @include flexBox(row,space-between);
+  
+}
+.hero{
+  background-color: #F2F0F1;
+}
+.heroLeftSide{
+  width: 50%;
+@include flexBox(column,flex-start,start);
+gap: 32px;
+// border: 1px solid red;
+h1{
+  @include integral-typagrapghy(900,64px,64px)
+}
+
+p{
+  @include satoshi-typography(400,16px,22px);
+  color: #00000099;
+}
+}
+.spaceLine{
+  width: 1px;
+  height: 74px;
+  background-color: black;
+  // border: 1px solid red;
+}
+.heroNumbers{
+  @include flexBox;
+
+  h2{
+      @include satoshi-typography(700,40px,54px)
+  }
+  p{
+    @include satoshi-typography(400,16px,22px)
+  }
+  .numberBox1{
+// border: 1px solid red;
+padding-right: 16px;
+border-right: 1px solid #00000099;
+
+  }
+
+  .numberBox2{
+  //  border: 1px solid red;
+   padding:0px 16px;
+border-right: 1px solid #00000099;
+
+  }
+}
+
+.numberBox3{
+  // border: 1px solid red;
+  padding-left: 16px;
+}
+
+.heroRightSide{
+  // border: 1px solid red;
+  background-size: cover;
+  width: 50%;
+  height: 663px;
+  // background-size: cover;
+  background-repeat: no-repeat;
+  // background-position: right;
+
+  .star2{
+    width: 104px;
+    height: 104px;
+    position: relative;
+    top:120px;
+    left: 420px;
+
+  }
+  .star1{
+    position: relative;
+    top:260px;
+    left: 30px;
+  }
+}
+
+@media screen and (max-width:1300px){
+  .heroMain{
+    @include flexBox(column);
+    // border:1px solid red
+  }
+  .heroLeftSide{
+    width: 100%;
+    margin-top: 40px;
+    @include flexBox(column,center,center);
+    // border: 1px solid red;
+    h1{
+      @include integral-typagrapghy(900,36px,34px);
+    }
+    p{
+      @include satoshi-typography(400,14px,20px);
+    }
+  }
+  .heroNumbers{
+    @include flexBox(row,center,center);
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    h2{
+      @include satoshi-typography(700,24px,32.4px);
+    }
+    p{
+      @include satoshi-typography(400,12px,22px);
+    }
+    .numberBox1{
+      // margin-left: 30px;
+    }
+    .numberBox2{
+      border:0px
+    }
+  }
+  .heroRightSide{
+    // border: 1px solid green;
+    // display: none;
+    height: 448px;
+    width: 100%;
+    // margin-bottom: 154px;
+    .star2{
+        width: 60px;
+        left: 160px;
+        top: 20px;
+    }
+    .star1{
+      width: 50px;
+      top: 80px;
+      left: 10px;
+    }
+  }
+}

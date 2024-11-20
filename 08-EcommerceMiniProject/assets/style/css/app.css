@@ -1,0 +1,2015 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.herobtn {
+  padding: 15px 67.5px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.6px;
+  background-color: black;
+  color: white;
+  border-radius: 62px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.newarrivalsbtn {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: black;
+  background-color: transparent;
+  padding: 15px 80px;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  border-radius: 62px;
+  cursor: pointer;
+}
+
+.footerbtn {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: black;
+  background-color: white;
+  padding: 12px 88.5px;
+  border-radius: 62px;
+  cursor: pointer;
+}
+
+.detailbtn {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: white;
+  background-color: black;
+  padding: 15px 157.5px;
+  border-radius: 62px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.toppartbtn {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: white;
+  background-color: black;
+  padding: 13px 29px;
+  border-radius: 62px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.detailcommentbtn {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: black;
+  background-color: white;
+  padding: 15px 45px;
+  border-radius: 62px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  margin-bottom: 64px;
+}
+
+.promobtn {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: white;
+  background-color: black;
+  border-radius: 62px;
+  padding: 13px 38.5px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.cartbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  gap: 12px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: white;
+  background-color: black;
+  border-radius: 62px;
+  padding: 19px 153.5px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 36px 64px;
+  border-radius: 20px;
+  position: relative;
+  bottom: 90px;
+}
+.contact h1 {
+  font-family: "Integral", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 45px;
+  color: white;
+}
+
+.contactRightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+footer {
+  background-color: #f0f0f0;
+}
+
+.mail {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  border-radius: 62px;
+  padding: 14px 16px;
+  gap: 12px;
+  width: 100%;
+}
+.mail input {
+  border: 0;
+}
+.mail input:focus {
+  outline: none;
+}
+
+.linksBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 113.5px;
+  margin-bottom: 50px;
+}
+.linksBox h1 {
+  font-family: "Integral", sans-serif;
+  font-weight: 900;
+  font-size: 33.45px;
+  line-height: 40.15px;
+  margin-bottom: 25px;
+}
+.linksBox p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 35px;
+}
+.linksBox .icons {
+  max-width: 248px;
+}
+
+.iconsBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+.iconsBox .fa-brands {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  padding: 9px;
+  color: black;
+}
+.iconsBox .fa-facebook-f {
+  padding: 9px 11px;
+  color: white;
+  background-color: black;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconsItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 26px;
+}
+.iconsItem h4 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 3px;
+  color: black;
+}
+.iconsItem li {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.bottom {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom h1 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.9px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.bottomLogos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 15px;
+  }
+  .contact h1 {
+    font-family: "Integral", sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 35px;
+  }
+  .contact p {
+    font-family: "Integral", sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 35px;
+    border: 1px solid red;
+    margin: 0;
+    text-align: center;
+  }
+  .footerbtn {
+    white-space: nowrap;
+    padding: 11.5px 60.5px;
+    font-family: "Satoshi", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18.9px;
+  }
+  .linksBox {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+  }
+  .linksBox li {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.navbarMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px;
+}
+
+.navbarLogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Integral", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38.4px;
+  padding-right: 40px;
+}
+.navbarLogo img {
+  display: none;
+}
+
+.navbarItems {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.6px;
+}
+.navbarItems .itemsList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.navbarItems a {
+  color: black;
+}
+
+.searchbox {
+  background-color: #F0F0F0;
+  border-radius: 62px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-left: 16px;
+  gap: 12px;
+}
+.searchbox input {
+  margin: 13px 0px;
+  border: 0px;
+  background-color: transparent;
+  width: 100%;
+}
+.searchbox input:focus {
+  outline: none;
+}
+
+.navbarIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding-left: 40px;
+}
+.navbarIcon .iconSearch {
+  display: none;
+}
+
+.itemsList {
+  padding-right: 40px;
+}
+.itemsList a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.items {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 900px) {
+  .navbarLogo {
+    font-family: "Integral", sans-serif;
+    font-weight: 700;
+    font-size: 25.2px;
+    line-height: 30.42px;
+    gap: 16px;
+  }
+  .navbarLogo img {
+    display: block;
+  }
+  .navbarItems {
+    display: none;
+  }
+  .searchbox {
+    display: none;
+  }
+  .navbarIcon {
+    padding-left: 0px;
+    gap: 8px;
+  }
+  .iconSearch {
+    display: block !important;
+  }
+}
+header {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 9px 0px;
+}
+header a {
+  color: white;
+  border-bottom: 1px solid white;
+}
+header .headerName {
+  display: flex;
+}
+
+p {
+  display: flex;
+}
+
+.headerTopContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .headerClose {
+    display: none;
+  }
+  .headerFirst {
+    display: none;
+  }
+  .headerName {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16.2px;
+  }
+  .headerTopContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.heroMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero {
+  background-color: #F2F0F1;
+}
+
+.heroLeftSide {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 32px;
+}
+.heroLeftSide h1 {
+  font-family: "Integral", sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 64px;
+}
+.heroLeftSide p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.spaceLine {
+  width: 1px;
+  height: 74px;
+  background-color: black;
+}
+
+.heroNumbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.heroNumbers h2 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 54px;
+}
+.heroNumbers p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+.heroNumbers .numberBox1 {
+  padding-right: 16px;
+  border-right: 1px solid rgba(0, 0, 0, 0.6);
+}
+.heroNumbers .numberBox2 {
+  padding: 0px 16px;
+  border-right: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.numberBox3 {
+  padding-left: 16px;
+}
+
+.heroRightSide {
+  background-size: cover;
+  width: 50%;
+  height: 663px;
+  background-repeat: no-repeat;
+}
+.heroRightSide .star2 {
+  width: 104px;
+  height: 104px;
+  position: relative;
+  top: 120px;
+  left: 420px;
+}
+.heroRightSide .star1 {
+  position: relative;
+  top: 260px;
+  left: 30px;
+}
+
+@media screen and (max-width: 1300px) {
+  .heroMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .heroLeftSide {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .heroLeftSide h1 {
+    font-family: "Integral", sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 34px;
+  }
+  .heroLeftSide p {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .heroNumbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .heroNumbers h2 {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32.4px;
+  }
+  .heroNumbers p {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .heroNumbers .numberBox2 {
+    border: 0px;
+  }
+  .heroRightSide {
+    height: 448px;
+    width: 100%;
+  }
+  .heroRightSide .star2 {
+    width: 60px;
+    left: 160px;
+    top: 20px;
+  }
+  .heroRightSide .star1 {
+    width: 50px;
+    top: 80px;
+    left: 10px;
+  }
+}
+.logoBar {
+  background-color: black;
+  margin-bottom: 72px;
+}
+
+.logoBarMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 106px;
+  padding: 42px 0px;
+}
+
+@media screen and (max-width: 1242px) {
+  .logoBarMain {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .logoBarMain {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .logoBarMain img {
+    width: 80px;
+    height: 20px;
+  }
+}
+.newarrivalsMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.newarrivalsMain h1 {
+  font-family: "Integral", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 57.6px;
+  margin-bottom: 55px;
+}
+
+.itemBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  overflow-x: auto;
+}
+
+.item1 img {
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.item1 h3 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 27px;
+  margin-bottom: 8px;
+}
+.item1 p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32.4px;
+}
+.item1 .itemstar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+.item1 .itemstar img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.item1 .itemstar h4 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+.item1 .itemstar p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.itemdiscount2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.itemdiscount2 h4 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32.4px;
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration-line: line-through;
+}
+.itemdiscount2 h5 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16.2px;
+  color: #FF3333;
+  background-color: rgba(255, 51, 51, 0.1019607843);
+  padding: 6px 13.5px;
+  border-radius: 62px;
+}
+
+.topselling {
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width: 1213px) {
+  .newarrivalsMain h1 {
+    font-family: "Integral", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38.4px;
+  }
+  .itemBox {
+    overflow-x: auto;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: start;
+  }
+}
+.line {
+  height: 2px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1019607843);
+  margin: 64px 0px;
+}
+
+.bottomline {
+  height: 2px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1019607843);
+  margin-bottom: 20px;
+}
+
+.dressStyleMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F0F0;
+  border-radius: 40px;
+  margin-bottom: 80px;
+}
+.dressStyleMain h1 {
+  font-family: "Integral", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 57.6px;
+  margin-top: 70px;
+}
+
+.styleSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  width: 100%;
+  padding: 64px;
+}
+
+.styleitem {
+  height: 300px;
+}
+
+.casual {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48.6px;
+  padding: 25px 0px 0px 36px;
+}
+
+.formal {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48.6px;
+  padding: 25px 0px 0px 36px;
+}
+
+.party {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48.6px;
+  padding: 25px 0px 0px 36px;
+}
+
+.gym {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48.6px;
+  padding: 25px 0px 0px 36px;
+}
+
+@media screen and (max-width: 900px) {
+  .dressStyleMain h1 {
+    text-align: center;
+    font-family: "Integral", sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .styleSection {
+    grid-template-rows: repeat(4, 5fr);
+    grid-template-columns: 2, 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+  }
+  .styleitem {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32.4px;
+  }
+}
+.commentMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 180px;
+}
+
+.commentName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.commentName h1 {
+  font-family: "Integral", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 57.6px;
+}
+.commentName .arrow {
+  display: flex;
+  gap: 16px;
+}
+
+.commentBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.commentBar p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.commentItem {
+  padding: 28px 32px 28px 32px;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  border-radius: 20px;
+}
+.commentItem .commentCheck {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.commentItem .commentCheck h3 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.commentItem2 {
+  padding: 28px 32px 28px 32px;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  border-radius: 20px;
+}
+.commentItem2 .commentCheck2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.commentItem2 .commentCheck2 h3 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.commentItem3 {
+  padding: 28px 32px 28px 32px;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  border-radius: 20px;
+}
+.commentItem3 .commentCheck3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.commentItem3 .commentCheck3 h3 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.commentStar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6.49px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 900px) {
+  .commentItem2 {
+    display: none;
+  }
+  .commentItem3 {
+    display: none;
+  }
+  .commentName {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .commentName h1 {
+    font-family: "Integral", sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+.detailline {
+  height: 2px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1019607843);
+  margin-bottom: 24px;
+}
+
+.folderLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+.folderLine p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.6px;
+  gap: 4px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.folderLine p img {
+  color: rgba(0, 0, 0, 0.6);
+}
+.folderLine h4 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: black;
+}
+
+.detailMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 80px;
+}
+
+.detailPhotos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+.detailPhotos .photo1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 152px;
+  height: 167px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+.detailPhotos .photo2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 152px;
+  height: 167px;
+}
+.detailPhotos .photo3 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 152px;
+  height: 167px;
+}
+
+.detailInfo h1 {
+  font-family: "Integral", sans-serif;
+  font-weight: 900;
+  font-size: 37px;
+  line-height: 48px;
+  margin-bottom: 10px;
+}
+.detailInfo p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.detailDescription {
+  margin-bottom: 24px;
+}
+
+.detailStar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+}
+.detailStar h4 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: black;
+}
+.detailStar p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.detailPoint {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailCost {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.detailCost p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 43.2px;
+  color: black;
+}
+.detailCost h4 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 43.2px;
+  color: rgba(0, 0, 0, 0.3019607843);
+  text-decoration-line: line-through;
+}
+.detailCost h5 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: #ff3333;
+  background-color: rgba(255, 51, 51, 0.1019607843);
+  padding: 6px 14px;
+  border-radius: 62px;
+}
+
+.detailColorBox h4 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 16px;
+}
+
+.detailColor {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+.detailColor .colorcircle {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+}
+.detailColor .colorBrown {
+  background-color: #4f4631;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.detailColor .colorGreen {
+  background-color: #314f4a;
+}
+.detailColor .colorPurple {
+  background-color: #31344f;
+}
+
+.detailSizeBox h4 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 16px;
+}
+
+.detailSize {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+.detailSize .detailItem {
+  background-color: #f0f0f0;
+  padding: 12px 24px;
+  border-radius: 62px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 24px;
+}
+.detailSize .detailBlackItem {
+  background-color: black;
+  color: white;
+}
+
+.detailNumberBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.detailNumberBox .detailNumber {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 38px;
+  padding: 14px 20px;
+  border-radius: 62px;
+}
+.detailNumberBox .detailNumber p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: black;
+}
+
+@media screen and (max-width: 900px) {
+  .detailMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .detailPhotos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  .detailPhotos .photo1 {
+    width: 95px;
+    height: 106px;
+  }
+  .detailPhotos .photo2 {
+    width: 95px;
+    height: 106px;
+    border-radius: 20px;
+  }
+  .detailPhotos .photo3 {
+    width: 95px;
+    height: 106px;
+    border-radius: 20px;
+  }
+  .detailMainPhoto {
+    order: -1;
+  }
+  .detailMainPhoto img {
+    width: 358px;
+    height: 290px;
+  }
+  .detailInfo h1 {
+    font-family: "Integral", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .detailCost p {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32.4px;
+  }
+  .detailCost h4 {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32.4px;
+  }
+  .detailCost h5 {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18.9px;
+  }
+  .detailDescription {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .detailSize {
+    gap: 8px;
+  }
+  .detailSize .detailItem {
+    padding: 10px 11px;
+    white-space: nowrap;
+  }
+  .detailbtn {
+    padding: 12px 51px;
+    white-space: nowrap;
+  }
+  .detailNumberBox {
+    gap: 12px;
+  }
+  .detailNumberBox .detailNumber {
+    gap: 16px;
+  }
+}
+.sectionsMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+  margin-bottom: 20px;
+}
+.sectionsMain p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.sectionsMain h3 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  color: black;
+  border-bottom: 2px solid black;
+  padding: 10px 120px;
+}
+
+@media screen and (max-width: 900px) {
+  .sectionsMain h3 {
+    padding: 0px;
+    font-family: "Satoshi", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .sectionsMain p {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.toppartMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.toppartLeftSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.toppartLeftSide h3 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32.4px;
+  color: black;
+}
+.toppartLeftSide p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.toppartRightSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.toppartRightSide .configuration {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 62px;
+  padding: 12px;
+}
+.toppartRightSide .toppartHistory {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 21px;
+  background-color: #f0f0f0;
+  border-radius: 62px;
+  padding: 12px;
+}
+.toppartRightSide .toppartHistory p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: black;
+}
+
+@media screen and (max-width: 900px) {
+  .toppartRightSide .toppartHistory {
+    display: none;
+  }
+  .toppartRightSide .configuration {
+    padding: 8px;
+  }
+  .toppartRightSide .toppartbtn {
+    padding: 12px 12px;
+    font-family: "Satoshi", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16.2px;
+    white-space: nowrap;
+  }
+  .toppartLeftSide h3 {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    white-space: nowrap;
+  }
+  .toppartLeftSide p {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.detailcommentMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.commentFirstLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.detailcommentBar {
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  border-radius: 20px;
+  padding: 28px 32px;
+  width: 50%;
+}
+.detailcommentBar .detailcommentTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.detailcommentBar .detailcommentStar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.detailcommentBar .detailcommentName {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.detailcommentBar .detailcommentName p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  color: black;
+}
+.detailcommentBar .detailcommentDescription {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 24px;
+}
+.detailcommentBar .detailcommentTime {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.commentSecondLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.commentThirdLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .detailcomment2 {
+    display: none;
+  }
+  .commentFirstLine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .detailcommentBar {
+    width: 100%;
+  }
+}
+.suggestionMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+.suggestionMain h1 {
+  font-family: "Integral", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 57.6px;
+  margin-bottom: 55px;
+}
+
+@media screen and (max-width: 900px) {
+  .suggestionMain h1 {
+    font-family: "Integral", sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+  }
+}
+.categoryfolderlineMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+.categoryfolderlineMain p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.6px;
+}
+
+.categoryLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.categoryLine p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.categoryFilter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.cartFolderMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.cartFolderMain p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.6px;
+}
+.cartFolderMain .cartLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+.cartFolderMain .cartLine p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.cartName {
+  font-family: "Integral", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 24px;
+}
+
+.yourcartMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  gap: 20px;
+  margin-bottom: 150px;
+}
+
+.cartmainLeftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  width: 60%;
+  padding: 20px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  border-radius: 20px;
+  gap: 24px;
+}
+
+.cartmainitem {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 16px;
+}
+.cartmainitem .itemPhoto {
+  width: 124px;
+  height: 124px;
+  border-radius: 9px;
+}
+
+.itemRightSide {
+  width: 100%;
+}
+
+.itemTop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.itemTop h3 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 2px;
+}
+
+.itemSecondLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 4px;
+}
+.itemSecondLine h4 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.9px;
+}
+.itemSecondLine p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.9px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.itemThirdLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 15px;
+}
+.itemThirdLine h4 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.9px;
+}
+.itemThirdLine p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.9px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.itemBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.itemBottom p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32.4px;
+}
+
+.itemNumber {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #F0F0F0;
+  padding: 12px 20px;
+  border-radius: 62px;
+}
+.itemNumber p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18.9px;
+}
+
+.cartline {
+  height: 2px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1019607843);
+}
+
+.cartmainRightSide {
+  width: 40%;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  padding: 20px 24px;
+  border-radius: 20px;
+}
+.cartmainRightSide h2 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32.4px;
+  margin-bottom: 24px;
+}
+
+.rightsideFirstLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.rightsideFirstLine p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.rightsideFirstLine h3 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.rightsideSecondLine {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightsideSecondLine p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.rightsideSecondLine h3 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FF3333;
+}
+
+.rightsideThirdLine {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightsideThirdLine p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.rightsideThirdLine h3 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.cartpromoline {
+  height: 2px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1019607843);
+  margin-bottom: 20px;
+}
+
+.rightsideTotal {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightsideTotal p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+}
+.rightsideTotal h3 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32.4px;
+}
+
+.cartPromoCode {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.promocode {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #F0F0F0;
+  gap: 12px;
+  border-radius: 62px;
+  padding: 12px 52px;
+}
+.promocode input {
+  border: 0px;
+  background-color: transparent;
+}
+.promocode input:focus {
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 900px) {
+  .yourcartMain {
+    flex-direction: column;
+  }
+  .cartmainLeftSide {
+    width: 100%;
+  }
+  .cartmainRightSide {
+    width: 100%;
+  }
+  .cartbtn {
+    padding: 17.5px 63px;
+  }
+  .promocode {
+    padding: 12px 20px;
+    gap: 0px;
+  }
+  .promobtn {
+    padding: 10px 10px;
+  }
+  .cartmainitem .itemPhoto {
+    width: 95px;
+    height: 95px;
+  }
+  .itemTop h3 {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21.6px;
+  }
+  .itemSecondLine {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16.2px;
+  }
+  .itemBottom p {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .itemBottom .itemNumber {
+    gap: 10px;
+    padding: 7px 10px;
+  }
+}
+.container {
+  margin: 0 auto;
+  max-width: 1240px;
+  width: 100%;
+  padding: 0px 10px;
+}/*# sourceMappingURL=app.css.map */

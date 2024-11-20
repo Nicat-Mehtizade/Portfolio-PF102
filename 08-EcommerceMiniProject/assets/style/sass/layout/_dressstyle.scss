@@ -1,0 +1,99 @@
+.dressStyleMain {
+  @include flexBox(column);
+  background-color: #F0F0F0;
+  border-radius: 40px;
+  margin-bottom: 80px;
+
+  h1 {
+    @include integral-typagrapghy(900, 48px, 57.6px);
+    margin-top: 70px;
+
+  }
+}
+
+.styleSection{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  // max-width: 800px;
+  width: 100%;
+  padding: 64px;
+
+}
+
+.styleitem{
+  // width: 200px;
+  height: 300px;
+}
+.casual{
+  grid-column-start: 1 ;
+  grid-column-end: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  @include satoshi-typography(700,36px,48.6px);
+  padding: 25px 0px 0px 36px;
+}
+.formal{
+  grid-column-start: 2 ;
+  grid-column-end: 4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  @include satoshi-typography(700,36px,48.6px);
+  padding: 25px 0px 0px 36px;
+
+
+}
+
+.party{
+  grid-column-start:1 ;
+  grid-column-end: 3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  @include satoshi-typography(700,36px,48.6px);
+  padding: 25px 0px 0px 36px;
+
+
+}
+
+.gym{
+  grid-column-start: 3;
+  grid-column-end: 3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 20px;
+  @include satoshi-typography(700,36px,48.6px);
+  padding: 25px 0px 0px 36px;
+
+}
+
+@media screen and (max-width:900px){
+  .dressStyleMain{
+    h1{
+      text-align: center;
+      @include integral-typagrapghy(900,32px,36px)
+    }
+  }
+  .styleSection{
+    // @include flexBox(column);
+   grid-template-rows: repeat(4, 5fr);
+   grid-template-columns: (2,1fr);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 24px;
+  }
+
+  .styleitem{
+   @include satoshi-typography(700,24px,32.4px)
+
+  }
+}

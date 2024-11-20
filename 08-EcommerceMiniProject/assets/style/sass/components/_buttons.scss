@@ -1,0 +1,83 @@
+.herobtn {
+  padding: 15px 67.5px;
+  @include satoshi-typography(500, 16px, 21.6px);
+  background-color: $primary-color;
+  color: $secondary-color;
+  border-radius: 62px;
+  border: 1px solid $primary-color;
+  cursor: pointer;
+}
+
+.newarrivalsbtn {
+  @include satoshi-typography(500, 16px, 21.6px);
+  color: $primary-color;
+  background-color: transparent;
+  padding: 15px 80px;
+  border: 1px solid #0000001a;
+  border-radius: 62px;
+  cursor: pointer;
+}
+
+.footerbtn {
+  @include satoshi-typography(500, 16px, 21.6px);
+  color: $primary-color;
+  background-color: $secondary-color;
+  padding: 12px 88.5px;
+  border-radius: 62px;
+  cursor: pointer;
+}
+
+.detailbtn {
+  @include satoshi-typography(500, 16px, 21.6px);
+  color: $secondary-color;
+  background-color: $primary-color;
+  padding: 15px 157.5px;
+  border-radius: 62px;
+  cursor: pointer;
+  border: 1px solid $primary-color;
+}
+
+.toppartbtn {
+  @include satoshi-typography(500, 16px, 21.6px);
+  color: $secondary-color;
+  background-color: $primary-color;
+  padding: 13px 29px;
+  border-radius: 62px;
+  cursor: pointer;
+  border: 1px solid $primary-color;
+}
+
+.detailcommentbtn {
+  @include satoshi-typography(500, 16px, 21.6px);
+  color: $primary-color;
+  background-color: $secondary-color;
+  padding: 15px 45px;
+  border-radius: 62px;
+  cursor: pointer;
+  border: 1px solid #0000001a;
+  margin-bottom: 64px;
+}
+
+.promobtn{
+  @include satoshi-typography(500, 16px, 21.6px);
+  color: $secondary-color;
+  background-color: $primary-color;
+  border-radius: 62px;
+  padding: 13px 38.5px;
+  cursor: pointer;
+border: 1px solid $primary-color;
+}
+
+.cartbtn{
+  @include flexBox(row,center,center);
+  white-space: nowrap;
+  gap: 12px;
+  @include satoshi-typography(500, 16px, 21.6px);
+  color: $secondary-color;
+  background-color: $primary-color;
+  border-radius: 62px;
+  padding: 19px 153.5px;
+  cursor: pointer;
+  border: 1px solid $primary-color;
+
+}

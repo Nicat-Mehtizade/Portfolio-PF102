@@ -1,0 +1,45 @@
+header {
+  background-color: $primary-color;
+  color: $secondary-color;
+  // @include flexBox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include satoshi-typography;
+//   border: 1px solid red;
+  padding: 9px 0px;
+  a {
+    color: white;
+    border-bottom: 1px solid white;
+    
+    
+  }
+  .headerName{
+    display: flex;
+  }
+}
+
+p {
+  display: flex;
+}
+
+.headerTopContainer {
+  @include flexBox(row,space-between);
+  width: 100%;
+}
+
+@media screen and (max-width:500px) {
+  .headerClose{
+    display: none;
+  }
+  .headerFirst{
+    display: none;
+  }
+  .headerName{
+    @include satoshi-typography(500,12px,16.2px)
+  }
+  .headerTopContainer{
+    @include flexBox(row,center,center);
+        
+  }
+}

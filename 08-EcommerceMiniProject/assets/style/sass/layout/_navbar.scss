@@ -1,0 +1,92 @@
+.navbarMain{
+    @include flexBox(row,space-between);
+    margin: 24px;
+}
+
+.navbarLogo{
+    @include flexBox;
+    @include integral-typagrapghy(700,32px,38.4px);
+    padding-right:40px;
+    img{
+        display: none;
+    }
+}
+
+.navbarItems{
+    @include satoshi-typography(400,16px,21.6px);
+    
+    .itemsList{
+        @include flexBox;
+        gap: 24px;
+    }
+    a{
+    color: $primary-color;
+
+    }
+}
+
+.searchbox{
+    background-color: #F0F0F0;
+    border-radius: 62px;
+    @include flexBox(row,flex-start,center);
+    width: 100%;
+    padding-left: 16px;
+    gap: 12px;
+    input{
+        margin: 13px 0px ;
+        border: 0px;
+        background-color:transparent;
+        width: 100%;
+    }
+
+    input:focus{
+        outline: none;
+    }
+
+}
+
+.navbarIcon{
+    @include flexBox;
+    gap: 14px;
+    padding-left: 40px;
+    .iconSearch{
+        display: none;
+        
+    }
+}
+.itemsList{
+    padding-right: 40px;
+
+    a{
+        @include flexBox;
+    }
+}
+.items{
+    white-space: nowrap;
+    
+}
+
+@media screen and (max-width:900px){
+    .navbarLogo{
+        @include integral-typagrapghy(700,25.2px,30.42px);
+        gap: 16px;
+        img{
+            display: block;
+        }
+    }
+    .navbarItems{
+        display: none;
+    }
+    .searchbox{
+        display: none;
+    }
+    .navbarIcon{
+        // border: 1px solid red;
+        padding-left: 0px;
+        gap: 8px;
+    }
+
+    .iconSearch{
+        display: block !important; 
+    }
+}

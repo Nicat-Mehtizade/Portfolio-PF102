@@ -143,8 +143,385 @@
 // console.log(index1);
 
 // --------------------------------------------------------------------------------------------------------
+                                                //Tasks
+// //1)
+
+// let findLength=(string)=>{
+//     console.log(string.length);
+// }
+// findLength("Salam Necesen?")
 
 
 
+// // --------------------------------------------------------------------------------------------------------
+
+// //2)
+
+// let findLetter=(letter,string)=>{
+//         if(string.includes(letter)){
+//             console.log(`Bu hərf ${string.indexOf(letter)+1}-ci indexdə yerləşir`);
+//         }
+//         else{
+//             console.log(`Bu hərf yoxdur`);
+//         }
+//     }
+    
+//     findLetter("l", "Salam")
 
 
+// // --------------------------------------------------------------------------------------------------------
+
+
+// //3)
+
+// let findUniCode=(letter,string)=>{
+//     console.log(string.charCodeAt(letter));
+// }
+
+// findUniCode("l", "Salam")
+
+// // --------------------------------------------------------------------------------------------------------
+
+// //4)
+
+// let makeBigger=(string)=>{
+//     console.log(string.toUpperCase());
+// }
+
+// makeBigger("salam")
+
+// // --------------------------------------------------------------------------------------------------------
+
+// //5)
+
+// let makeSmaller=(string)=>{
+//     console.log(string.toLowerCase());
+// }
+
+// makeSmaller("SALAM")
+
+// // --------------------------------------------------------------------------------------------------------
+
+// //6)
+
+// let deleteGap=(string)=>{
+//     console.log(string.trim());
+// }
+
+// deleteGap("         Hello           ")
+
+// // --------------------------------------------------------------------------------------------------------
+
+
+// //7)
+
+// let changeWord=(string,word,changeWord)=>{
+//     console.log(string.replace(word,changeWord));
+// }
+
+// changeWord("Salam Nicat Mehtizade Nicat","Nicat","Kanan")
+
+
+// // --------------------------------------------------------------------------------------------------------
+
+// //8)
+
+// let mirror=(string)=>{
+//     let reversed="";
+//     for(i=string.length-1;i>=0;i--){
+//         // reversed+=string[i]
+//         reversed=reversed.concat(string[i])
+
+//     }
+//     console.log(reversed);
+
+
+// }
+
+// mirror("Salam")
+
+// // --------------------------------------------------------------------------------------------------------
+
+// //9)
+
+// let changeLetterSize=(string)=>{
+//   return string.split("").map(char=>{
+//     if(char===char.toUpperCase()){
+//         return(char.toLowerCase());
+//     }
+//     else{
+//         return(char.toUpperCase());
+//     }
+  
+
+//   }
+  
+// ).join("")
+// }
+
+// console.log(changeLetterSize("LnNAIhBjB"))
+
+
+// // --------------------------------------------------------------------------------------------------------
+
+// //9)
+
+// let deleteNumber=(string)=>{
+//     let letter=""
+//     let number=0
+//     for(i=0;i<string.length;i++){
+//         if(string[i]*1==string[i]){
+//             number+=string[i]
+//         }
+//         else{
+//             letter+=string[i]
+//         }
+
+//     }
+//     console.log(letter);
+
+// }
+
+// deleteNumber("asq13231asdad123aw1assd")
+
+// // --------------------------------------------------------------------------------------------------------
+
+
+// //10)
+
+// let word=(string)=>{
+//     console.log(string.split(" ").map(string=>string.charAt(0).toUpperCase()+string.slice(1)).join(" ")); 
+// }
+
+// word("sALam mEnim aDim nIcATdir")
+
+// // --------------------------------------------------------------------------------------------------------
+
+// //11)
+
+// let findNumAndLetter=(string)=>{
+//     let number=0
+//     let letter=0
+//     for(i=0;i<string.length;i++){
+//         if(string[i]*1==string[i]){
+//             number++
+//         }
+//         else{
+//             letter++
+//         }
+//     }
+//     console.log(number,letter);
+// }
+
+// findNumAndLetter("saldaksld123rn12312sad")
+
+// // --------------------------------------------------------------------------------------------------------
+
+// //12)
+
+// let deletegap=(string)=>{
+//     console.log(string.split(" ").join(""));
+// }
+
+// deletegap(" asdnas a aosidaoisda qsqeqse ")
+
+// // --------------------------------------------------------------------------------------------------------
+
+// //13)
+
+// let changeWordsPlaces=(string)=>{
+//     let words= string.split(" ")
+//     if(words.length>1){
+//     let swap=words[0];
+//     words[0]=words[words.length-1];
+//     words[words.length-1]=swap;
+    
+  
+// }
+// console.log(words.join(" "));
+// }
+
+// changeWordsPlaces("salam men nicat")
+
+// // --------------------------------------------------------------------------------------------------------
+
+//1)
+
+let name=(string)=>{
+    console.log(string.length);
+}
+
+name("salam necesen ne var ne yox")
+
+// // --------------------------------------------------------------------------------------------------------
+
+//2)
+
+let findLetter=(string,letter)=>{
+
+   console.log(string.indexOf(letter)+1);
+
+}
+
+findLetter("Salam","m")
+
+// // --------------------------------------------------------------------------------------------------------
+
+//3)
+
+let findUniCode=(letter,string)=>{
+    console.log(string.charCodeAt(letter));                 //Burda niyə birinci stringi yazanda işləmədi?
+}
+
+findUniCode("Salam Necesen","N")
+
+// // --------------------------------------------------------------------------------------------------------
+
+//4)
+
+let makeBiggerWords=(string)=>{
+    console.log(string.toUpperCase());
+}
+
+makeBiggerWords("salam")
+
+// // --------------------------------------------------------------------------------------------------------
+
+//5)
+
+let makeSmallerWords=(string)=>{
+    console.log(string.toLowerCase());
+}
+
+makeSmallerWords("Salam")
+
+// // --------------------------------------------------------------------------------------------------------
+
+//6)
+
+let deleteGap=(string)=>{
+    console.log(string.trim());
+}
+
+deleteGap("     Salam Necesen         ")
+
+// // --------------------------------------------------------------------------------------------------------
+
+//7)
+
+let changeWord=(string,name,changeWord)=>{
+    console.log(string.replace(name,changeWord));
+}
+
+changeWord("Salam Necesen Nicat","Nicat","Cavansir")
+
+// // --------------------------------------------------------------------------------------------------------
+
+//8)
+
+let reverseWord=(string)=>{
+    reverse=""
+    for(i=string.length-1;i>=0;i--){
+        reverse+=string[i]
+    }
+    console.log(reverse);
+
+}
+
+reverseWord("Salam Necesen")
+
+
+// // --------------------------------------------------------------------------------------------------------
+
+//9)
+
+let changeSizeLetters=(string)=>{
+    return string.split("").map(char=>{
+        if(char==char.toUpperCase()){
+                return char.toLowerCase()
+        }
+        else{
+            return char.toUpperCase()
+        }
+    }).join("")
+}
+
+console.log(changeSizeLetters("sAlAm NeCesEEnNnnn"))
+
+// // --------------------------------------------------------------------------------------------------------
+
+
+//9)
+
+let removeNum=(string)=>{
+    let letter= " ";
+    let number=0
+    for(i=0;i<string.length;i++){
+        if(string[i]*1==string[i]){
+            number+=string[i]
+        }
+        else{
+            letter+=string[i]
+        }
+
+    }
+    console.log(letter);
+
+}
+
+removeNum("saib31ub1u3bsdi123sada123aubd3")
+
+// // --------------------------------------------------------------------------------------------------------
+
+//10)
+
+let bigFirstLetter=(string)=>{
+    console.log(string.split(" ").map(string=>string.charAt(0).toUpperCase()+string.slice(1)).join(" "))
+}
+
+console.log(bigFirstLetter("sAlam mEn niCaT"))
+
+// // --------------------------------------------------------------------------------------------------------
+
+//11)
+
+let countNumAndLetter=(string)=>{
+    let number=0
+    let letter=""
+    for(i=0;i<string.length;i++){
+        if(string[i]*1==string[i]){
+            number++
+        }
+        else{
+            letter++
+        }
+    }
+    console.log(number, letter);
+}
+
+countNumAndLetter("asdad13casd13")
+
+// // --------------------------------------------------------------------------------------------------------
+
+//12)
+
+let deleteGaps=(string)=>{
+    console.log(string.split(" ").join(""));
+}
+
+deleteGaps("  sasg lasdmal qwe  1231 asda   a")
+
+// // --------------------------------------------------------------------------------------------------------
+
+//13)
+
+let changeWordPlaces=(string)=>{
+    let word=string.split(" ")
+
+    let swap=word[0];
+    word[0]=word[word.length-1];
+    word[word.length-1]=swap;
+    console.log(word.join(" "));
+
+}
+changeWordPlaces("Salam Men Nicat")

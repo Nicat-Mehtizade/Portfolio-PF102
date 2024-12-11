@@ -1,0 +1,134 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+    gap: 20px;
+    box-shadow: 5px 10px 8px 10px #888888;
+    margin: 250px 50px;
+    
+}
+
+.header{
+    background-color: #7ADECC;
+text-align: center;
+width: 100%;
+color: white;
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 000;
+border-radius: 20px 20px 0px 0px;
+
+}
+.toDoButtons{
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px;
+    width: 100%;
+    input{
+        padding: 10px 15px ;
+        border-radius: 20px;
+        width: 100%;
+        font-size: 20px;
+        
+    }
+    .addBtn{
+        padding: 10px 40px;
+        background-color: #4EB5F8;
+        color:white;
+border-radius: 20px;
+transition: 0.3s;
+    }
+    .addBtn:hover{
+        background-color: blue;
+        
+    }
+    .sortBtn{
+        padding: 10px 40px;
+        background-color: #4BCCAC;
+        color:white;
+        border-radius: 20px;
+    transition: 0.3s;
+    white-space: nowrap;
+    }
+    .sortBtn:hover{
+        background-color: green;
+    }
+    .deleteBtn{
+        padding: 10px 40px;
+        background-color: #FF6E7A;
+        color:white;
+        border-radius: 20px;
+        transition: 0.3s;
+
+    }
+    .deleteBtn:hover{
+        background-color: red;
+    }
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    
+    button{
+        border-radius: 8px;
+        background-color: #FF6E7A;
+        color:white;
+        margin-left: 10px;
+        padding: 5px;
+        transition: 0.3s;
+    }
+    button:hover{
+        background-color: red;
+    }
+}
+
+@media screen and (max-width:750px){
+    .toDoButtons{
+        .addBtn{
+        padding: 10px 20px;
+    }
+    .sortBtn{
+        padding: 10px 20px;
+    }
+    .deleteBtn{
+        padding: 10px 20px;
+    }
+
+}
+}
+
+@media screen and (max-width:750px){
+    .toDoButtons{
+        .addBtn{
+        padding: 10px ;
+    }
+    .sortBtn{
+        padding: 10px ;
+    }
+    .deleteBtn{
+        padding: 10px ;
+    }
+}
+}

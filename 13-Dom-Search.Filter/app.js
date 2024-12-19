@@ -94,6 +94,9 @@ const searchInput=document.querySelector("#searchInput")
 const ascBtn=document.querySelector(".ascBtn")
 const descBtn=document.querySelector(".descBtn")
 const defaultBtn=document.querySelector(".defaultBtn")
+const ascTitleBtn=document.querySelector(".ascTitleBtn")
+const descTitleBtn=document.querySelector(".descTitleBtn")
+const sortSelect=document.getElementById("sortSelect")
 
 creatList()
 
@@ -130,7 +133,6 @@ function creatList(items=products){
 
 }
 
-
 ascBtn.addEventListener("click",()=>{
     const sortedProducts=products.toSorted((a,b)=> a.price-b.price)
     creatList(sortedProducts)
@@ -153,3 +155,33 @@ searchInput.addEventListener("input",(e)=>{
     )
     creatList(filtered)
 })
+
+ascTitleBtn.addEventListener("click",()=>{
+  const sortedProducts=products.toSorted((a,b)=>a.title.toLowerCase().localeCompare(b.title.toLowerCase()))
+  creatList(sortedProducts)
+})
+
+
+  descTitleBtn.addEventListener("click",()=>{
+    const sortedProducts=products.toSorted((a,b)=>b.title.toLowerCase().localeCompare(a.title.toLowerCase())
+  )
+  creatList(sortedProducts)
+
+  })
+
+  function createCategory (){
+    products.forEach((elem)=>{
+      const option=document.createElement("option")
+      option.textContent=elem.category
+      option.setAttribute("value", elem.category)
+
+      sortSelect.append(option)
+    })
+  }
+
+  createCategory()
+
+  sortSelect.addEventListener("change",(e)=>{
+    const filteredProducts=products.filter((elem)=>elem.category.toLocaleLowerCase()==e.target.value.toLocaleLowerCase())
+    creatList(filteredProducts)
+  })

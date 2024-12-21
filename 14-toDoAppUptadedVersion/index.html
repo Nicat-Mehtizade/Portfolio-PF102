@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <div class="toDo">
+        <div class="container">
+            <div class="toDoApp">
+            <div class="toDoMain">
+                <div class="toDoHeader">
+                    <p>To Do List</p>
+                    <img src="./photos/check-list.png" alt="">
+                </div>
+                <div class="toDoInputBar">
+                    <div class="inputHead">
+                    <input type="text" id="toDoInput" placeholder="Enter your text...">
+                    <button class="addBtn">Add</button>
+                    <button class="deleteAll">Delete All</button>
+                </div>
+                <div class="inputBottom">
+                    <p class="feedBack"></p>
+                </div>
+                <select id="listSelect">
+                    <option value="">Choose One</option>
+                </select>
+                    
+                </div>
+                <ul class="list">
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+</body>
+</html>

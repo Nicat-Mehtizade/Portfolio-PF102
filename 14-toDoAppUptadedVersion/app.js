@@ -18,7 +18,7 @@ addBtn.addEventListener("click",()=>{
             draggable: true
           });
       createList()
-     
+     toDoInput.value=""
     }
 })
 

@@ -132,3 +132,7 @@ transition: 0.3s;
     }
 }
 }
+
+.darkMode{
+    background-color: black;
+}

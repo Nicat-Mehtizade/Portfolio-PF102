@@ -27,6 +27,7 @@ function createList(){
     li.innerHTML=toDoInput.value
     list.append(li) 
 
+    localStorage.setItem("listData",li)
 
     const deleteBtn=document.createElement("button")
     deleteBtn.textContent="Delete"
@@ -149,4 +150,3 @@ let sortedItems;
         list.innerHTML=""
 sortedItems.forEach((item) => list.appendChild(item));
 })
-

@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e90ff, #4b0082);
+    color: #333;
+  }
+  .registerMain {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  .registerMain h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+  }
+  #username,#email,#password {
+    width: 94%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  .registerMain input:focus {
+    outline: none;
+    border: 1px solid #1e90ff;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+  }
+  .registerMain .validation,
+  .registerMain .validation2 {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    
+  }
+  .signupBtn {
+    width: 100%;
+    padding: 10px;
+    background: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .signupBtn:hover {
+    background: #155dbe;
+  }
+
+  .passwordBar{
+    position: relative;
+  }
+  .fa-solid{
+    position: absolute;
+    right: 10px;
+    top: 21px;
+    cursor: pointer;
+    color: grey;
+    transition: 0.3s;
+  }
+
+  .fa-solid:hover {
+    color: black;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .registerMain {
+      padding: 15px 20px;
+    }
+    .registerMain h1 {
+      font-size: 1.5em;
+    }
+  }
+
+ @media screen and (max-width:450px){
+    .registerMain{
+      padding: 10px;
+      max-width: 290px;
+    }
+ }
+  

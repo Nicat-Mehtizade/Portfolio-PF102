@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+
+.signinMain h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+
+form input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: 0;
+}
+
+.passwordBar {
+  position: relative;
+}
+
+.passwordBar input {
+  padding-right: 40px; 
+  outline: 0;
+}
+
+.fa-solid {
+  position: absolute;
+  right: 12px;
+  top: 40%;
+  cursor: pointer;
+  color: grey;
+  transition: 0.3s;
+}
+
+.fa-solid:hover {
+  color: black;
+}
+
+
+.validation {
+  margin: 10px 0;
+  color: red;
+  font-size: 14px;
+  text-align: left;
+}
+
+
+form button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #12c2e9, #c471ed);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+form button:hover {
+  opacity: 0.8;
+}
+

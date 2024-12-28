@@ -9,9 +9,7 @@ const eyeBtn=document.querySelector(".fa-solid")
 const loader = document.getElementById("loader");
 const container = document.querySelector(".container")
 
-
 const users=[]
-
 
 function RegisterUser(){
     
@@ -39,6 +37,9 @@ function RegisterUser(){
         username,
         email,
         password,
+        wishlist:[],
+        basket:[],
+        isLogged:false,
     }
 
 

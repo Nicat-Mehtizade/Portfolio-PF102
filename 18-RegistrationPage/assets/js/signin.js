@@ -11,7 +11,7 @@ function logInUser(){
     const users=getDataFromLocal("users") || []
 
     const checkUser=users.some((user)=>(user.username==usernameOrEmail || user.email==usernameOrEmail) && user.password==password)
-
+const activeUser=users.find((user)=>user.username==usernameOrEmail || user.email==usernameOrEmail)
     if(checkUser){
         Swal.fire({
             position: "center",
@@ -21,12 +21,17 @@ function logInUser(){
             timer: 1500, 
           }).then((result)=>{
             window.location.href="./index.html"
+            activeUser.isLogged=true
+            setDataInLocal("users",users)
           });
     }else{
         errorMessage.textContent="Account information is incorrect"
         errorMessage.style.color="red"
     }
+console.log(activeUser);
+
 }
+
 
 signInBtn.addEventListener("click",(e)=>{
     e.preventDefault()

@@ -7,3 +7,4 @@ function setDataInLocal(key,value){
 function getDataFromLocal(key){
    return JSON.parse(localStorage.getItem(key))
 }
+

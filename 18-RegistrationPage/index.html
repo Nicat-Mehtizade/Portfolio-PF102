@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/style/index.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/style/index.css" />
+  </head>
+  <body>
+    <!-- NavBar Start -->
     <div class="header">
-        <div class="container">
-          <div class="nav">
-            <div class="logo">
-              <p>FASHION</p>
-            </div>
-            <div class="navBar">
-              <a href="">CATOLOGUE</a>
-              <a href="">FASHION</a>
-              <a href="">FAVOURITE</a>
-              <a href="">LIFESTYLE</a>
-              <div class="navbarBtnBar">
-            <a href="signup.html" class="navBarBtn">REGISTER</a>
-            <a href="signin.html" class="navBarBtn">LOGIN</a>
-              </div>
+      <div class="container">
+        <div class="nav">
+          <div class="logo">
+            <p>FASHION</p>
+          </div>
+          <div class="navBar">
+            <a class="navbarItems" href="index.html">CATOLOGUE</a>
+            <a class="navbarItems" href="">FASHION</a>
+            <a class="navbarItems" href="wishlish.html">FAVOURITE</a>
+            <a class="navbarItems user" href=""></a>
+            <div class="navbarBtnBar">
+              <a href="signup.html" class="navBarBtn login">REGISTER</a>
+              <a href="signin.html" class="navBarBtn register">LOGIN</a>
+              <button class="navBarBtn logout">LOGOUT</button>
             </div>
           </div>
         </div>
       </div>
-</body>
+    </div>
+    <!-- NavBar End -->
+
+    <!-- Products Start -->
+    <div class="products">
+      <div class="container">
+        <div class="product-card"></div>
+      </div>
+    </div>
+    <!-- Products End -->
+
+
+    <script type="module" src="./assets/js/index.js"></script>
+  </body>
 </html>

@@ -1,0 +1,100 @@
+.basketInfoMain{
+    @include flexBox;
+    border: 1px solid #E4E4E4;
+    padding: 35px;
+    gap: 48px;
+    margin-bottom: 72px;
+}
+
+.line{
+    background-color: #E4E4E4;
+    width: 1px;
+    height: 157.5px;
+}
+
+.infoCol{
+    @include flexBox(column,center,center);
+    h3{
+        @include poppins-typography(500,16px,27.2px);
+        margin-bottom: 16px;
+        text-align: center;
+        white-space: nowrap;
+    }
+    p{
+        color: #212121BF;
+        @include poppins-typography(400,16px,27.2px);
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:1069px){
+    .basketInfoMain{
+        flex-wrap: wrap;
+    }
+    .line{
+        display: none;
+    }
+}
+
+
+
+  
+
+  @media (max-width: 667px) {
+    .basket {
+      padding: 5px;
+    }
+  
+    .d-flex {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .d-flex h1 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  
+    .d-flex button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    table {
+      font-size: 12px;
+    }
+  
+    thead {
+      display: none; /* Hide table headers on small screens */
+    }
+  
+    tbody tr {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+  
+    tbody td {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    //   margin-bottom: 5px;
+    }
+  
+    tbody td:nth-child(1),
+    tbody td:nth-child(2) {
+      text-align: center;
+    }
+  
+    .btn {
+      font-size: 10px;
+      padding: 5px;
+    }
+  
+    .table {
+      border: none;
+    }
+  }
+  

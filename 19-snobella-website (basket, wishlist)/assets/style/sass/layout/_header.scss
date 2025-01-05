@@ -1,0 +1,57 @@
+header{
+    background-color: #007878;
+}
+
+.headerMain{
+    @include flexBox(row,space-between,center);
+    padding: 12px 0px;
+    margin-bottom: 24px;
+}
+
+.headerLeftSide{
+    @include flexBox;
+    gap: 12px;
+    p{
+        color: $secondary-color;
+        @include poppins-typography(500,14px,23.8px);
+        margin: 0px;
+        white-space: nowrap;
+        
+    }
+   
+}
+
+.headerRightSide{
+    @include flexBox;
+    gap: 18px;
+    a{
+        color: $secondary-color;
+        @include poppins-typography(500,14px,16.8px);
+        white-space: nowrap;
+    }
+    p{
+        color: $secondary-color;
+        @include poppins-typography(400,14px,20px);
+        margin: 0px
+    }
+}
+
+@media screen and (max-width:500px){
+    .headerRightSide{
+        gap: 5px;
+        a{
+        @include poppins-typography(500,9px,21.8px);
+        }
+        p{
+        @include poppins-typography(400,12px,21.8px);
+
+        }
+    }
+    .headerLeftSide{
+        gap:4px;
+        p{
+        @include poppins-typography(500,9px,21.8px);
+            
+        }
+    }
+}

@@ -1,0 +1,92 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+  }
+  
+  .header {
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+  }
+  
+  .container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+  }
+  
+  body {
+    font-family: "Poppins", serif;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+  }
+  
+  .logo p {
+    font-weight: 700;
+    font-size: 30px;
+  }
+  
+  .navBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 54px;
+  }
+  
+  .navbarItems {
+    color: #242323;
+    transition: 0.3s;
+  }
+  
+  .navBar a:hover {
+    color: red;
+  }
+  
+  .navbarBtnBar {
+    display: flex;
+  }
+  
+  .navBarBtn {
+    background-color: black;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 7px;
+    border: 0;
+    font-size: 16px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+    font-family: "Poppins", serif;
+
+  }
+  
+  .navBarBtn:hover {
+    border: 1px solid black;
+    color: black;
+    background-color: transparent;
+  }
+
+  .user{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #037D5F;
+    color: white;
+    transition: 0.3s;
+  }
+
+  .user:hover{
+    color: red;
+  }

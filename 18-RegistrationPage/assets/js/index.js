@@ -253,7 +253,7 @@ const logoutBtn=document.querySelector(".logout")
 
 const userName=document.querySelector(".user")
 
-console.log(activeUser);
+// console.log(activeUser);
 
 
 if(activeUser){
@@ -261,15 +261,19 @@ if(activeUser){
   registerBtn.style.display="none"
   logoutBtn.style.display="block"
 userName.textContent=`USER: ${activeUser.username}`
-
 }else{
-  alert("Zehmet olmasa kayıt olunuz!!")
+  loginBtn.style.display = "block";
+  registerBtn.style.display = "block";
+  logoutBtn.style.display = "none";
+  userName.textContent = "USER: GUEST";
 }
 
 logoutBtn.addEventListener("click",()=>{
+  if(activeUser){
+    activeUser.isLogged=false
+    setDataInLocal("users",users)
+  }
   window.location.href="./signin.html"
-  activeUser.isLogged=false
-  setDataInLocal("users",users)
 })
 
 const productCard=document.querySelector(".product-card")
@@ -279,8 +283,6 @@ const createCard=(arr)=>{
         const productItem=document.createElement("div")
         productItem.classList.add("product-item")
         
-        // const productImgDiv=document.createElement("div")
-
         const productImg=document.createElement("img")
         productImg.setAttribute("src",card.image)
         productImg.className="productImg"
@@ -300,14 +302,34 @@ const createCard=(arr)=>{
         productPrice.textContent=`${card.price} AZN`
         productPrice.className="product-price"
 
-        const heartBtn=document.createElement("i")
-        heartBtn.className="fa-regular fa-heart"
+        const btnDiv=document.createElement("div")
+        btnDiv.className="btnDiv"
 
-if(activeUser.wishlist.includes(card.id)){
-    heartBtn.className="fa-solid fa-heart"
+
+        const heartBtn=document.createElement("i")
+        heartBtn.className="fa-regular fa-heart fa-xl"
+
+      const detailsBtn=document.createElement("i")
+      detailsBtn.className="fa-solid fa-circle-info fa-xl"
+      detailsBtn.style.color="#2090FF"
+
+      detailsBtn.addEventListener("click",()=>{
+
+      })
+      
+
+      const basketBtn=document.createElement("button")
+      basketBtn.textContent="Add to cart"
+      basketBtn.className="btn btn-warning"
+      
+
+
+if(activeUser){
+  if(activeUser.wishlist.includes(card.id)){
+    heartBtn.className="fa-solid fa-heart fa-xl"
     heartBtn.style.color="red"
 }else{
-  heartBtn.className="fa-regular fa-heart"
+  heartBtn.className="fa-regular fa-heart fa-xl"
 }
 
         heartBtn.addEventListener("click",()=>{
@@ -315,18 +337,30 @@ if(activeUser.wishlist.includes(card.id)){
 
             if(findIdx==-1){
                 activeUser.wishlist.push(card.id)
-                heartBtn.className="fa-solid fa-heart"
+                heartBtn.className="fa-solid fa-heart fa-xl"
                 heartBtn.style.color="red"
             }else{
                 activeUser.wishlist.splice(findIdx,1)
-                heartBtn.className="fa-regular fa-heart"
+                heartBtn.className="fa-regular fa-heart fa-xl"
             }
             setDataInLocal("users",users)
         })
-      
+}else{
+  heartBtn.className = "fa-regular fa-heart";
+      heartBtn.addEventListener("click", () => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "PLEASE SIGN IN!",
+        });
+      });
+}
 
+    const detailBtn=document.createElement("i")
+    detailBtn.className=""
 
-        productInfo.append(productImg,productTitle,productDesc,productPrice, heartBtn)
+        btnDiv.append(heartBtn, detailsBtn)
+        productInfo.append(productImg,productTitle,productDesc,productPrice, btnDiv,basketBtn)
         productItem.append(productInfo)   
         productCard.append(productItem)
 

@@ -1,0 +1,135 @@
+footer{
+    background-color: #F7F7F9;
+}
+
+.footerTop{
+    @include flexBox(row,space-between,center);
+    padding: 32px 0px;
+}
+
+.footerSearchBar{
+    background-color: white;  
+    border: 1px solid #9E9E9E59; 
+    @include flexBox;
+    padding: 12px;
+    border-radius: 8px;
+    width: 40%;
+    @include flexBox(row,space-between,center);
+    input {
+      background-color: transparent;
+      border: 0;
+      outline: 0;
+    }
+    input:focus {
+      border: 0;
+    }
+}
+.footerColumns{
+    @include flexBox(row,space-between,start);
+    padding: 56px;
+    flex-wrap: wrap
+}
+.footerFirstColumn{
+    @include flexBox(column,center,start);
+    width: 25%;
+    gap: 30px;
+    p{
+        @include poppins-typography(400,16px,27.2px);
+        color:#212121BF;
+        
+    }
+}
+
+.footerEmail{
+    @include flexBox(row,center,center);
+    gap: 10px;
+    p{
+        @include poppins-typography(400,16px,27.2px);
+        color:#212121BF;
+    }
+}
+
+.footerContact{
+    @include flexBox;
+    gap: 10px;
+    p{
+        @include rubik-typagrapghy(400,16px,27.2px);
+        color:#212121BF;
+    }
+}
+
+ul{
+    @include flexBox(column,center,start);
+    gap: 20px;
+    h3{
+        @include rubik-typagrapghy(500,18px,30.6px)
+    }
+    li{
+        @include poppins-typography(400,16px,19.2px);
+        color: #212121BF;
+    }
+    li:hover{
+        text-decoration: underline;
+    }
+}
+
+.bottomMain{
+    @include flexBox(row,space-between,center);
+    padding: 25px 0px;
+    h1{
+        @include poppins-typography(400,16px,27.2px);
+        color: #212121BF;
+    }
+}
+
+.bottomIcons{
+    @include flexBox;
+    gap: 32px;
+}
+
+.fa-brands{
+    cursor: pointer;
+}
+
+a {
+    @include flexBox;
+    color: #000; 
+    transition: all 0.3s ease;
+
+    &:hover {   
+      transform: scale(1.2); 
+    }
+
+    &.instagram {
+      &:hover {
+        color: #E4405F; 
+      }
+    }
+
+    &.facebook {
+      &:hover {
+        color: #1877F2; 
+      }
+    }
+
+    &.whatsapp {
+      &:hover {
+        color: #25D366; 
+      }
+    }
+  }
+
+
+@media screen and (max-width:750px){
+    .footerFirstColumn{
+        width: 40%;
+    }
+}
+@media screen and (max-width:540px){
+    .footerFirstColumn{
+        width: 100%;
+    }
+    .footerSearchBar{
+        display: none;
+    }
+}

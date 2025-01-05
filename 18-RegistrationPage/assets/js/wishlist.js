@@ -273,29 +273,35 @@ const users = getDataFromLocal("users");
 
 const activeUser = users.find((user) => user.isLogged == true);
 
-    const loginBtn=document.querySelector(".login")
-    const registerBtn=document.querySelector(".register")
-    const logoutBtn=document.querySelector(".logout")
+const userName = document.querySelector(".user");
 
-    if(activeUser){
-        loginBtn.style.display="none"
-        registerBtn.style.display="none"
-        logoutBtn.style.display="block"
-    }
+const loginBtn = document.querySelector(".login");
+const registerBtn = document.querySelector(".register");
+const logoutBtn = document.querySelector(".logout");
 
-    logoutBtn.addEventListener("click",()=>{
-        window.location.href="./signin.html"
-        activeUser.isLogged=false
-        setDataInLocal("users", users)
-    })
+if (activeUser) {
+  loginBtn.style.display = "none";
+  registerBtn.style.display = "none";
+  logoutBtn.style.display = "block";
+  userName.textContent = `USER: ${activeUser.username}`;
+}
+
+logoutBtn.addEventListener("click", () => {
+  window.location.href = "./signin.html";
+  activeUser.isLogged = false;
+  setDataInLocal("users", users);
+  userName.textContent = "USER: GUEST";
+});
 
 const productCard = document.querySelector(".product-card");
 
 const createCard = (arr) => {
   arr.forEach((id) => {
     const cardItemidx = products.findIndex((c) => c.id == id);
-
+console.log(cardItemidx);
     const card = products[cardItemidx];
+
+    // console.log(card);
 
     const productItem = document.createElement("div");
     productItem.classList.add("product-item");
@@ -320,11 +326,24 @@ const createCard = (arr) => {
     productPrice.textContent = `${card.price} AZN`;
     productPrice.className = "product-price";
 
+    const btnDiv = document.createElement("div");
+    btnDiv.className = "btnDiv";
+
     const heartBtn = document.createElement("i");
-    heartBtn.className = "fa-regular fa-heart";
+    heartBtn.className = "fa-regular fa-heart fa-xl";
+
+    const detailsBtn=document.createElement("i")
+      detailsBtn.className="fa-solid fa-circle-info fa-xl"
+      detailsBtn.style.color="#2090FF"
+      
+
+      const basketBtn=document.createElement("i")
+      basketBtn.className="fa-solid fa-cart-shopping fa-xl"
+      basketBtn.style.color="#FCB725"
+      
 
     if (activeUser.wishlist.includes(card.id)) {
-      heartBtn.className = "fa-solid fa-heart";
+      heartBtn.className = "fa-solid fa-heart fa-xl";
       heartBtn.style.color = "red";
     }
 
@@ -334,15 +353,18 @@ const createCard = (arr) => {
       activeUser.wishlist.splice(findIdx, 1);
 
       setDataInLocal("users", users);
-      productCard.innerHTML=""
+      productCard.innerHTML = "";
       createCard(activeUser.wishlist);
     });
+
+    btnDiv.append(heartBtn,detailsBtn,basketBtn)
+
     productInfo.append(
       productImg,
       productTitle,
       productDesc,
       productPrice,
-      heartBtn
+      btnDiv
     );
     productItem.append(productInfo);
     productCard.append(productItem);

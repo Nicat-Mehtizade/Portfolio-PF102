@@ -1,0 +1,101 @@
+.navbarMain {
+  @include flexBox(row, space-around);
+  width: 100%;
+  // border: 1px solid red;
+  gap: 42px;
+  margin-bottom: 31px;
+  h1 {
+    @include poppins-typography(600, 38px, 38px);
+    color: $primary-color;
+  }
+}
+
+.navbarSearchBar {
+  background-color: #f7f9fc;
+  width: 100%;
+  @include flexBox(row, space-between);
+  padding: 12px;
+  border-radius: 8px;
+  input {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+  }
+  input:focus {
+    border: 0;
+  }
+}
+.fa-bars {
+  display: none;
+}
+.navbarRightSide {
+  @include flexBox;
+  gap: 26px;
+}
+.signUpContainer,
+.basketContainer,
+.wishlistContainer {
+  @include flexBox;
+  gap: 10px;
+  a {
+    @include poppins-typography(500, 14px, 16.8px);
+    white-space: nowrap;
+    margin: 0px;
+    color: $primary-color;
+  }
+}
+.favorites-count{
+  @include poppins-typography(500, 14px, 16.8px);
+  color: red
+}
+.pagesBarMain {
+  @include flexBox(row, start, center);
+  gap: 54px;
+  @include poppins-typography(400, 16px, 27.2px);
+  margin-bottom: 24px;
+  p {
+    cursor: pointer;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .navbarMain {
+    gap: 0px;
+    h1 {
+      @include poppins-typography(600, 28px, 28px);
+    }
+  }
+  .pagesBarMain {
+    gap: 20px;
+    flex-wrap: wrap;
+    p {
+      @include poppins-typography(400, 12px, 23.2px);
+    }
+  }
+  .pagesbarLine{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .navbarMain {
+    h1 {
+      @include poppins-typography(600, 13px, 13px);
+    }
+  }
+  .navbarSearchBar {
+    padding: 5px;
+    img {
+      width: 20px;
+    }
+  }
+  .signUpContainer,
+  .basketContainer,
+  .wishlistContainer {
+    display: none;
+  }
+  .fa-bars {
+    display: block;
+  }
+}

@@ -1,0 +1,99 @@
+.wishInfo{
+    border: 1px solid #E4E4E4;
+    border-radius: 8px;
+    width: 25%;
+    
+}
+.wishMain{
+    @include flexBox(row,center,start);
+    gap: 97px;
+}
+
+.favTitle{
+    @include rubik-typagrapghy(500,40px,68px);
+    margin-bottom: 48px;
+}
+.infoHeader{
+    @include flexBox(row,start,center);
+    gap: 20px;
+    padding: 14px;
+    .infoTitle{
+        h4{
+            @include rubik-typagrapghy(500,16px,27.2px);
+            color: #212121;
+        }
+        p{
+            @include poppins-typography(400,14px,23.8px);
+            color: #212121BF;
+        }
+    }
+    border-bottom: 1px solid #E4E4E4;
+}
+.order,.comment,.adress,.adjustments{
+    padding: 14px;
+    @include flexBox(row,start,center);
+    gap: 12px;
+    border-bottom: 1px solid #E4E4E4;
+    cursor: pointer;
+}
+
+.favorites{
+    padding: 14px;
+    @include flexBox(row,start,center);
+    gap: 12px;
+    border-bottom: 1px solid #E4E4E4;
+    background-color: #F9F9F9;
+    border-left: 3px solid #007878;
+    cursor: pointer;
+}
+.wishlistpagesBarMain{
+    @include flexBox(row, start, center);
+    gap: 54px;
+    @include poppins-typography(400, 16px, 27.2px);
+    margin-bottom: 24px;
+    p {
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+}
+.pagesbarLine{
+    background-color: #27314226;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 32px;
+}
+.wishlistMain{
+    display: grid;
+    grid-template-columns: 20rem 20rem;
+    gap:48px;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 114px;
+    }
+
+@media screen and (max-width:950px){
+    .wishlistpagesBarMain{
+        flex-wrap: wrap;
+        gap: 20px;
+        p {
+            @include poppins-typography(400, 12px, 23.2px);
+          }
+    }
+    .wishlistMain{
+    grid-template-columns: 20rem;
+
+    }
+}
+
+@media screen and (max-width:550px){
+    .wishMain{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .wishInfo{
+        width: 100%;
+    }
+}

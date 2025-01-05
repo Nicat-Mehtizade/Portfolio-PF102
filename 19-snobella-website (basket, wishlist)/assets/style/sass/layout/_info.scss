@@ -1,0 +1,28 @@
+.info{
+    background-color: #F7F7F7;
+}
+
+.infoMain{
+    @include flexBox(row,space-between,center);
+    padding: 48px;
+    margin-bottom: 80px;
+    div{
+        @include flexBox;
+        gap: 10px;
+        p{
+            @include poppins-typography(500,16px,27.2px );
+            white-space:nowrap
+        }
+    }
+}
+@media screen and (max-width:1060px){
+    .infoMain{
+        flex-wrap: wrap;
+        div{
+            p{
+            @include poppins-typography(500,12px,27.2px );
+
+            }
+        }
+    }
+}

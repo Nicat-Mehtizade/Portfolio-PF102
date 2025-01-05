@@ -1,0 +1,66 @@
+.hero{
+    background-color: #FFE2E0;
+}
+
+.heroMain{
+    @include flexBox(row,space-between,center);
+    padding: 24px 0px;
+}
+
+.heroMainLeftSide{
+width: 50%;
+    h2{
+        color: #DF4244;
+        @include rubik-typagrapghy(500,24px,40.8px);
+          
+    }
+    h1{
+        color: $primary-color;
+        @include rubik-typagrapghy(700,40px,68px);
+        
+    }
+    p{
+        color: #212121BF;
+        @include poppins-typography(400,16px,27.2px);
+        width: 75%;
+        margin-bottom: 48px;
+    }
+}
+.heroMainRightSide{
+    width: 50%;
+    img{
+        width: 100%;
+    }
+}
+
+.circleContainer{
+    @include flexBox(row,start,center);
+    gap: 17px;
+}
+
+.circle{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #20636340;
+}
+
+.circleChosen{
+    width: 26px;
+    height: 12px;
+    border-radius: 8px;
+    background-color: #DF4244;
+}
+
+@media screen and (max-width:992px){
+    .heroMain{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .heroMainLeftSide{
+        width: 100%;
+    }
+    .heroMainRightSide{
+        width: 100%;
+    }
+}

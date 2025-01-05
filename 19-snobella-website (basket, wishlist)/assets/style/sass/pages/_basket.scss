@@ -1,0 +1,20 @@
+.pathMain{
+    @include flexBox(row,start);
+    gap: 7px;
+    h4{
+        @include poppins-typography(400,14px,23.8px);
+        color: #1D1D1D;
+    }
+    img{
+        width: 10px;
+        height: 10px
+    }
+    p{
+        @include poppins-typography(400,14px,23.8px);
+        color: #1D1D1DBF;
+    }
+}
+.basketTitle{
+    @include rubik-typagrapghy(500,40px,68px);
+    margin-bottom:20px
+}

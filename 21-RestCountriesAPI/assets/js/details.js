@@ -45,7 +45,7 @@ function createDetail(obj) {
   cardName.innerHTML = `<span class="label">Native Name:</span> ${nativeText.official}`;
 
   const cardPopulation = document.createElement("p");
-  cardPopulation.innerHTML = `<span class="label">Population:</span> ${obj.population}`;
+  cardPopulation.innerHTML = `<span class="label">Population:</span> ${obj.population.toLocaleString()}`;
 
   const cardRegion = document.createElement("p");
   cardRegion.innerHTML = `<span class="label">Region:</span> ${obj.region}`;

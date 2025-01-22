@@ -159,3 +159,26 @@ body{
     font-size: 20px;
     font-weight: 700;
 }
+
+@media screen and (max-width:770px){
+    .searchContainer{
+        width: 70%;
+        input{
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width:400px){
+    .searchContainer{
+        width: 100%;
+        input{
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+    .resultMain{
+        h1{
+            font-size: 24px;
+        }
+    }
+}

@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+body{
+    font-family: "Poppins", serif;
+}
+
+.headerMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 65px;
+    h1{
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .author{
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+}
+
+.searchContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #D95108;
+    border-radius: 28px;
+    width: 40%;
+    padding: 0px 0px 0px 15px;
+    margin-bottom: 50px;
+    input{
+        border: none;
+        outline: none;
+        font-size: 18px;
+        flex: 1;
+        color: #D95108;
+    }
+    input::placeholder{
+        color: #D95108;
+
+    }
+}
+
+.iconContainer{
+    background-color: #D95108;
+    border-radius: 0px 28px 28px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 15px 15px;  */
+    button{
+        background: none;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 0px 28px 28px 0px;
+    }
+}
+
+.resultMain{
+    h1{
+        font-size: 30px;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+}
+
+.mealImg{
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+    margin-bottom: 20px;
+}
+.mealDiv{
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+    margin-bottom: 30px;
+    min-height: 450px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mealTitle{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.mealBtn{
+    background-color: #D95108;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+.modal{
+    --bs-modal-width: 700px;
+    --bs-modal-padding: 2rem;
+}
+.modal-content{
+    background-color: #D65108;
+}
+.btn-close{
+    background-color: white;
+    color: black;
+    opacity: 100%;
+    border-radius: 50%;
+}
+.modal-title{
+    color: white;
+}
+.mealDetailDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detailTitle, .instructions, .detailIns, .watchBtn{
+    color: white;
+}
+.detailTitle {
+    font-weight: 700;
+    font-size: 24px;
+}
+.instructions{
+    font-weight: 700;
+    font-size: 18px;
+}
+.detailCategory{
+    background-color: white;
+    color: #D65108;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.detailImg{
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.watchBtn{
+    font-size: 20px;
+    font-weight: 700;
+}

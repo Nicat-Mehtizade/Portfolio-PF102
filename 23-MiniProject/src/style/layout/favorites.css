@@ -1,0 +1,10 @@
+.favs{
+    padding: 30px 0px;
+}
+
+.noFavoritesMessage {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+  }

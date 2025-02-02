@@ -1,0 +1,26 @@
+.contact-form {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  .contact-info {
+    background-color: #ff4444;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  .contact-info h2 {
+    color: white;
+    border-bottom: 2px solid white;
+  }
+  .contact-info i {
+    margin-right: 10px;
+  }
+  .contactHeader{
+    color: black;
+    font-size: 24px;
+  }
+  .form-control{
+    background-color: white;
+  }

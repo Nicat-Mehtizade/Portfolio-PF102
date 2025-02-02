@@ -1,0 +1,135 @@
+.event-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.event-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+.eventDiv{
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 10px;
+    padding: 15px 0px;
+}
+
+.eventImg{
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    max-height: 500px;
+    border-radius: 8px;
+}
+.event-info {
+    flex: 2;
+    min-width: 300px;
+}
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+.info-item {
+    margin-bottom: 10px;
+}
+.label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+.description {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #a3a6a965;
+    border-radius: 8px;
+}
+.ticket-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    h2{
+        color: black;
+    }
+}
+#buyTicketBtn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#buyTicketBtn:hover {
+    background-color: #2980b9;
+}
+.favorite-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #e74c3c;
+    margin-left: 10px;
+}
+.swal2-title{
+    border-bottom: 0px;
+}
+@media screen and (max-width:1000px){
+    .eventDiv{
+        flex-direction: column;
+    }
+}
+
+/* Artı ve Eksi Butonları için stil */
+.ticket-count-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .ticket-count-label {
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  button.ticket-minus,
+  button.ticket-plus {
+    background-color: #f1f1f1;  
+    color: #333;
+    padding: 10px;
+    font-size: 20px;  
+    border-radius: 50%;  
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;  
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;  
+    margin: 0 10px;
+  }
+  
+  button.ticket-minus:hover,
+  button.ticket-plus:hover {
+    background-color: #e0e0e0;  
+  }
+  
+  button.ticket-minus:active,
+  button.ticket-plus:active {
+    transform: scale(0.95);  
+    background-color: #d3d3d3;  
+  }
+  
+  button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+    border: 2px solid #aaa;
+  }
+  

@@ -1,0 +1,24 @@
+.about-section {
+    padding: 60px 0;
+  }
+  .about-content {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  .team-member {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+.aboutHeader{
+    color: black;
+    font-size: 24px;
+}

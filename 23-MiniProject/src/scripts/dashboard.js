@@ -141,14 +141,25 @@ function createTable(arr) {
     eventTicket.textContent = event.ticketsAvailable;
 
     const actionBtns = document.createElement("td");
+    actionBtns.className="actionBtns"
+
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
+    deleteBtn.className="deleteBtn"
+
+    const editBtn = document.createElement("button");
+    editBtn.textContent = "Edit";
+    editBtn.className="editBtn"
+    editBtn.style.marginRight = "10px";
+    editBtn.addEventListener("click", () => {
+      openEditModal(event);
+    });
 
     deleteBtn.addEventListener("click", () => {
       deleteEvent(event.id, trElem);
     });
 
-    actionBtns.append(deleteBtn);
+    actionBtns.append(editBtn,deleteBtn);
 
     trElem.append(eventName, eventDate, eventVanue, eventTicket, actionBtns);
     tBody.append(trElem);
@@ -197,4 +208,99 @@ function uptadeStatistics() {
 
 document.addEventListener("DOMContentLoaded", () => {
   uptadeStatistics(); 
+});
+
+
+const editModal = document.getElementById("editModal");
+const closeModal = document.querySelector(".close");
+const editEventForm = document.getElementById("editEventForm");
+let currentEventId = null;
+
+
+function openEditModal(event) {
+  currentEventId = event.id;
+
+  document.getElementById("editEventName").value = event.name;
+  document.getElementById("editEventDate").value = event.dateTime.slice(0, 16);
+  document.getElementById("editVenueName").value = event.venueName;
+  document.getElementById("editVenueAddress").value = event.venueAddress;
+  document.getElementById("editVenueCapacity").value = event.venueCapacity;
+  document.getElementById("editOrganizer").value = event.organizer;
+  document.getElementById("editDescription").value = event.description;
+  document.getElementById("editTicketsAvailable").value = event.ticketsAvailable;
+  document.getElementById("editCategory").value = event.category;
+  document.getElementById("editPrice").value = event.price;
+  document.getElementById("editAgeRestriction").value = event.ageRestriction;
+  document.getElementById("editPosterURL").value = event.posterURL;
+  document.getElementById("editDuration").value = event.duration;
+
+  editModal.style.display = "block";
+}
+
+closeModal.addEventListener("click", () => {
+  editModal.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === editModal) {
+    editModal.style.display = "none";
+  }
+});
+
+
+editEventForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const updatedData = {};
+
+  if (document.getElementById("editEventName").value)
+    updatedData.name = document.getElementById("editEventName").value;
+  
+  if (document.getElementById("editEventDate").value)
+    updatedData.dateTime = document.getElementById("editEventDate").value;
+  
+  if (document.getElementById("editVenueName").value)
+    updatedData.venueName = document.getElementById("editVenueName").value;
+  
+  if (document.getElementById("editVenueAddress").value)
+    updatedData.venueAddress = document.getElementById("editVenueAddress").value;
+  
+  if (document.getElementById("editVenueCapacity").value)
+    updatedData.venueCapacity = +document.getElementById("editVenueCapacity").value;
+  
+  if (document.getElementById("editOrganizer").value)
+    updatedData.organizer = document.getElementById("editOrganizer").value;
+  
+  if (document.getElementById("editDescription").value)
+    updatedData.description = document.getElementById("editDescription").value;
+  
+  if (document.getElementById("editTicketsAvailable").value)
+    updatedData.ticketsAvailable = +document.getElementById("editTicketsAvailable").value;
+  
+  if (document.getElementById("editCategory").value)
+    updatedData.category = document.getElementById("editCategory").value;
+  
+  if (document.getElementById("editPrice").value)
+    updatedData.price = +document.getElementById("editPrice").value;
+  
+  if (document.getElementById("editAgeRestriction").value)
+    updatedData.ageRestriction = document.getElementById("editAgeRestriction").value;
+  
+  if (document.getElementById("editPosterURL").value)
+    updatedData.posterURL = document.getElementById("editPosterURL").value;
+  
+  if (document.getElementById("editDuration").value)
+    updatedData.duration = document.getElementById("editDuration").value;
+
+  if (Object.keys(updatedData).length === 0) {
+    console.log("Heç bir dəyişiklik edilməyib.");
+    return;
+  }
+
+  axios
+    .patch(`${BASE_URL}events/${currentEventId}`, updatedData)
+    .then((res) => {
+      console.log("Event successfully updated:", res.data);
+    })
+    .catch((err) => console.error("Error updating event:", err));
 });

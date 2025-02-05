@@ -11,8 +11,6 @@
 
 body {
   font-family: "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -169,4 +167,60 @@ margin-top: 3px;
   font-size: 1.5rem;
   cursor: pointer;
   transition: background-color 0.2s;
+}
+
+@media screen and (max-width: 575px) {
+  .header {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .todo-input {
+    flex-direction: column;
+  }
+
+  .todo-input input {
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 10px;
+  }
+
+  .todo-input button {
+    width: 100%;
+    font-size: 1.2rem;
+    border-radius: 4px;
+  }
+
+  .deleteAll {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  .todo-item {
+    align-items: flex-start;
+  }
+
+  .todo-checkbox {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .todo-text {
+    font-size: 1rem;
+  }
+
+  .todo-delete {
+    position: relative;
+    right: auto;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .date {
+    font-size: 10px;
+  }
 }

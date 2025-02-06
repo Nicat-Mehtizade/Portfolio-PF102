@@ -1,0 +1,14 @@
+.navigationBar{
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    a{
+        text-decoration: none;
+        color: white;
+        transition: all 0.3s ease-in-out;
+    }
+    a:hover{
+        color: red;
+        transform: scale(1.1);
+    }
+}

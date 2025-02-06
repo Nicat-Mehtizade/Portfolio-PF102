@@ -1,0 +1,17 @@
+.footerButtonBar{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    button{
+        background-color: transparent;
+        color: white;
+        padding: 5px 25px;
+        border: 1px solid transparent;
+        margin-top: 10px;
+    }
+    button:hover{
+        border: 1px solid white;
+        background-color: transparent;
+    }
+}

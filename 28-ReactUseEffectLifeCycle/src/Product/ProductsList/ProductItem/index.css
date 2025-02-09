@@ -1,0 +1,10 @@
+.productItem{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+    align-items: center;
+    padding: 0px 10px;
+}
+.green{
+    background-color: greenyellow;
+}

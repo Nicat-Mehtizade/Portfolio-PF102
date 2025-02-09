@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "price": 10.99,
+      "isDiscounted": false
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": 15.99,
+      "isDiscounted": true
+    },
+    {
+      "id": "v_qkMqi3",
+      "isDiscounted": false,
+      "name": "Product 3",
+      "price": 10
+    },
+    {
+      "id": "v4ohbmbI",
+      "isDiscounted": true,
+      "name": "Product 4",
+      "price": 18
+    },
+    {
+      "id": "8hwX2p21",
+      "isDiscounted": true,
+      "name": "Product 5",
+      "price": 18.99
+    },
+    {
+      "id": "aAB0KuIK",
+      "isDiscounted": false,
+      "name": "Product 6",
+      "price": 24
+    }
+  ]
+}

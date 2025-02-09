@@ -1,0 +1,13 @@
+.searchProduct {
+  width: 100%;
+  margin-bottom: 20px;
+  input {
+    width: 90%;
+    padding: 10px;
+    font-weight: 700;
+    border: 1px solid rgba(128, 128, 128, 0.468);
+  }
+  input:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,90 @@
+.header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(72, 71, 71, 0.477),
+      rgba(0, 0, 0, 0.647)
+    ),
+    url(./../../../public/retro-pen-books-glasses-old-photo-hd-wallpaper-5088a520b3f20144836d0b4bf47a5c6e.jpg);
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 10px 30px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.navLinks {
+  display: flex;
+  list-style: none;
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.3s;
+  }
+}
+
+.navLinks a:hover {
+  background-color: #555;
+}
+
+.navLinks .active {
+  border-bottom: 2px solid #fff;
+  color: orange;
+}
+
+.headerTitle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: white;
+  font-weight: 900;
+  font-size: 80px;
+  letter-spacing: 13.4px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  animation: moveInLeft 1s ease-out;
+  white-space: nowrap;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+  80% {
+    transform: translate(-50%, -48%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .headerTitle {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .header {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  .headerTitle {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .navLinks{
+    font-size: 13px;
+  }
+  .headerTitle {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+}

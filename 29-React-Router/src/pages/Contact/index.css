@@ -1,0 +1,90 @@
+
+  .contact-card {
+    padding: 3rem;
+    background-color: rgba(23, 23, 23, 0.95);
+    color: rgb(229, 229, 229);
+    border-radius: 0.5rem;
+    min-width: 600px;
+    text-align: center;
+  }
+  
+  .contact-title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: white;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: rgb(200, 200, 200);
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgba(45, 45, 45, 0.9);
+    border: 1px solid rgba(75, 75, 75, 0.8);
+    border-radius: 0.25rem;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .form-textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 1rem;
+  }
+  
+  .submit-button:hover {
+    background-color: rgb(230, 230, 230);
+  }
+  
+  .content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (hover: none) {
+    .form-input,
+    .form-textarea {
+      font-size: 16px; 
+    }
+    
+    .submit-button {
+      padding: 15px; 
+    }
+  }
+  
+
+  @media (max-width: 600px) {
+    .contact-card {
+      min-width: 300px;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+  }

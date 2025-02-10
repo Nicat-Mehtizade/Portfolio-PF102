@@ -1,0 +1,20 @@
+.logo {
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 1.7px;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .logo {
+    font-size: 20px;
+    margin-top: 18px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .logo {
+    display: none;
+  }
+}

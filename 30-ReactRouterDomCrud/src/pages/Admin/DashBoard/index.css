@@ -1,0 +1,8 @@
+.dashboard{
+    font-size: 40px;
+    font-weight: 700;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

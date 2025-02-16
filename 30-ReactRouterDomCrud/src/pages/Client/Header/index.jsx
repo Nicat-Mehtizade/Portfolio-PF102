@@ -32,6 +32,12 @@ const ClientHeader = () => {
               Products
             </NavLink>
             <NavLink
+              to={"/favorites"}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Favorites
+            </NavLink>
+            <NavLink
               to={"/admin"} className="admin"
             >
               Admin

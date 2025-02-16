@@ -10,6 +10,7 @@ import AdminProducts from "./pages/Admin/Products";
 import AddProduct from "./pages/Admin/AddProduct"
 import About from "./pages/Client/About";
 import Contact from "./pages/Client/Contact";
+import Favorites from "./pages/Client/Favorites";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact/>} />
+          <Route path="favorites" element={<Favorites/>} />
           <Route path="products">
             <Route index element={<Products />} />
             <Route path=":id" element={<ProductDetails />} />

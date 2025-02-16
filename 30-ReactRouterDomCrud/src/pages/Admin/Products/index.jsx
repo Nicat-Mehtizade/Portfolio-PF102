@@ -2,6 +2,12 @@ import "./index.css";
 import { useEffect, useState } from "react";
 import { BASE_URL } from "./../../../constants/index";
 import axios from "axios";
+import { message, Popconfirm } from "antd";
+
+const cancel = (e) => {
+  console.log(e);
+  message.error("Click on No");
+};
 const AdminProducts = () => {
   const [products, setProducts] = useState([]);
   const getProducts = async () => {
@@ -16,15 +22,15 @@ const AdminProducts = () => {
     getProducts();
   }, []);
 
-  const handleDelete=async(id)=>{
+  const handleDelete = async (id) => {
     try {
-      const response=await axios.delete(`${BASE_URL}products/${id}`)
-      const filteredProducts=products.filter((p)=>p.id !==id)
-      setProducts(filteredProducts)
+      const response = await axios.delete(`${BASE_URL}products/${id}`);
+      const filteredProducts = products.filter((p) => p.id !== id);
+      setProducts(filteredProducts);
     } catch (error) {
       console.log(error);
     }
-  }
+  };
   return (
     <div>
       <div className="container">
@@ -55,9 +61,20 @@ const AdminProducts = () => {
                         {p.description?.slice(0, 60) + "..."}
                       </td>
                       <td>
-                        <div >
+                        <div>
                           <button className="editBtn">Edit</button>
-                          <button onClick={()=>{handleDelete(p.id)}} className="deleteBtn">Delete</button>
+                          <Popconfirm
+                            title="Delete the product"
+                            description="Are you sure to delete this product?"
+                            onConfirm={() => {
+                              handleDelete(p.id);
+                            }}
+                            onCancel={cancel}
+                            okText="Yes"
+                            cancelText="No"
+                          >
+                            <button className="deleteBtn">Delete</button>
+                          </Popconfirm>
                         </div>
                       </td>
                     </tr>

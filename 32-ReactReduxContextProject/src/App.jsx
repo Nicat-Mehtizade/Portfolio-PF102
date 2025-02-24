@@ -12,6 +12,7 @@ import Dashboard from "./Layout/Admin/DashBoard";
 import AdminProducts from "./Layout/Admin/AdminProducts";
 import AddProduct from "./Layout/Admin/AddProduct";
 import About from "./Layout/Client/About";
+import Contact from "./Layout/Client/Contact";
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
           <Route path="favorites" element={<Favorites />} />
           <Route path="basket" element={<Basket />} />
           <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="products" element={<Products />} />
           <Route path="products/:id" element={<Details />} />
 

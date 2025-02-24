@@ -33,6 +33,16 @@ const Navigation = () => {
       >
         About
       </NavLink>
+      <NavLink
+        to={"/contact"}
+        className={({ isActive }) =>
+          ` transition duration-300 hover:text-red-500 ${
+            isActive ? `${styles.active}` : ""
+          }`
+        }
+      >
+        Contact
+      </NavLink>
 
     </div>
   );

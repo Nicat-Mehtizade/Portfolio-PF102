@@ -8,19 +8,50 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toggleFavs } from "../../../redux/features/FavoritesSlice";
 import { addBasket } from "../../../redux/features/BasketSlice";
+import { useEffect, useState } from "react";
 const Products = () => {
   const { data, isError, isLoading } = useGetProductsQuery();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const favs = useSelector((state) => state.favorites.items);
-  const basket=useSelector((state)=>state.basket.items)
-  console.log(data);
+  const basket = useSelector((state) => state.basket.items);
+  const [category, setCategory] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
+  const [filteredData, setFilteredData] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [filterByPrice, setFilterByPrice] = useState("");
+
+  useEffect(() => {
+    if (data && data.length > 0) {
+      const uniqueCategory = [...new Set(data.map((item) => item.category))];
+      setCategory(uniqueCategory);
+    }
+  }, [data]);
+
+  useEffect(() => {
+    if (data) {
+      let filtered = data
+        .filter((item) =>
+          item.name.toLowerCase().includes(searchValue.toLowerCase().trim())
+        )
+        .filter((p) =>
+          selectedCategory == "all" ? true : p.category == selectedCategory
+        );
+        
+      if (filterByPrice === "ascByPrice") {
+        filtered = filtered.slice().toSorted((a, b) => (a.price - (a.price * a.discount) / 100) - (b.price - (b.price * b.discount) / 100));
+      } else if(filterByPrice === "descByPrice") {
+        filtered = filtered.slice().toSorted((a, b) =>(b.price - (b.price * b.discount) / 100) - (a.price - (a.price * a.discount) / 100));
+      }
+      setFilteredData(filtered);
+    }
+  }, [searchValue, data, selectedCategory, filterByPrice]);
 
   if (isError) {
-    <div>Some errors occured!</div>;
+    return <div>Some errors occured!</div>;
   }
   if (isLoading) {
-    <div>Loading...</div>;
+    return <div>Loading...</div>;
   }
 
   const handleDetails = (id) => {
@@ -31,26 +62,47 @@ const Products = () => {
     dispatch(toggleFavs(p));
   };
 
-    const handleAddBasket=(p)=>{
-      dispatch(addBasket(p))
-    }
+  const handleAddBasket = (p) => {
+    dispatch(addBasket(p));
+  };
+
   return (
     <div>
       <div className="max-w-[1280px] mx-auto">
         <div>
           <div className="flex justify-between items-center border-b border-gray-300 py-4">
             <h1 className="text-4xl font-bold ">Products</h1>
-            <div className="flex">
+            <div className="flex gap-1">
               <input
                 type="text"
                 name=""
                 id=""
                 placeholder="Enter a product name"
+                onChange={(e) => setSearchValue(e.target.value)}
+                className="border p-1 px-4 rounded-lg "
               />
-              <select name="" id="">
-                <option value="" selected disabled>
-                  Select a category
-                </option>
+              <select
+                className="border rounded-lg"
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                name=""
+                id=""
+              >
+                <option value="all">All</option>
+                {category.map((p, index) => (
+                  <option key={index} value={p}>
+                    {p}
+                  </option>
+                ))}
+              </select>
+              <select
+                onChange={(e) => setFilterByPrice(e.target.value)}
+                className="border rounded-lg"
+                name=""
+                id=""
+              >
+                <option value="" selected disabled>Filter By Price</option>
+                <option value="ascByPrice">Lowest Price</option>
+                <option value="descByPrice">Highest Price</option>
               </select>
             </div>
           </div>
@@ -63,8 +115,8 @@ const Products = () => {
               padding: "30px 0px",
             }}
           >
-            {data &&
-              data.map((p) => {
+            {filteredData &&
+              filteredData.map((p) => {
                 return (
                   <Box
                     key={p.id}
@@ -126,7 +178,11 @@ const Products = () => {
                           onClick={() => {
                             handleAddBasket(p);
                           }}
-                          className={`text-2xl cursor-pointer text-black border border-gray-300 rounded-full p-2 ${basket.find((q)=>q.id==p.id) ? "bg-amber-300" : "bg-white"}`}
+                          className={`text-2xl cursor-pointer text-black border border-gray-300 rounded-full p-2 ${
+                            basket.find((q) => q.id == p.id)
+                              ? "bg-amber-300"
+                              : "bg-white"
+                          }`}
                         >
                           <IoCart />
                         </button>

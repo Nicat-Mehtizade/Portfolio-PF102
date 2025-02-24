@@ -23,6 +23,17 @@ const Navigation = () => {
         Products
       </NavLink>
 
+      <NavLink
+        to={"/about"}
+        className={({ isActive }) =>
+          ` transition duration-300 hover:text-red-500 ${
+            isActive ? `${styles.active}` : ""
+          }`
+        }
+      >
+        About
+      </NavLink>
+
     </div>
   );
 };

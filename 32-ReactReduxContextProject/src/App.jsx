@@ -11,6 +11,7 @@ import AdminLayout from "./Layout/Admin/AdminLayout";
 import Dashboard from "./Layout/Admin/DashBoard";
 import AdminProducts from "./Layout/Admin/AdminProducts";
 import AddProduct from "./Layout/Admin/AddProduct";
+import About from "./Layout/Client/About";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="favorites" element={<Favorites />} />
           <Route path="basket" element={<Basket />} />
+          <Route path="about" element={<About />} />
           <Route path="products" element={<Products />} />
           <Route path="products/:id" element={<Details />} />
 

@@ -1,0 +1,16 @@
+.watch{
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    max-height: 450px;
+}
+.watchImg{
+    height: 100%;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.watch:hover .watchImg{
+    transform: scale(1.05);
+}

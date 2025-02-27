@@ -1,0 +1,50 @@
+{
+    "watches": [
+      {
+        "id": 1,
+        "brand": "Rolex",
+        "model": "Submariner",
+        "price": 12500,
+        "description": "The Rolex Submariner is known for its water-resistant design and is ideal for divers.",
+        "rating": 4.8,
+        "image": "images/rolex-submariner.png"
+      },
+      {
+        "id": 2,
+        "brand": "Omega",
+        "model": "Speedmaster",
+        "price": 6800,
+        "description": "The Omega Speedmaster, also known as the 'Moonwatch,' was used during the Apollo missions.",
+        "rating": 4.7,
+        "image": "images/omega-speedmaster.png"
+      },
+      {
+        "id": 3,
+        "brand": "Tag Heuer",
+        "model": "Carrera",
+        "price": 4200,
+        "description": "The Tag Heuer Carrera is a luxury sports watch inspired by motor racing.",
+        "rating": 4.5,
+        "image": "images/tagheuer-carrera.png"
+      },
+      {
+        "id": 4,
+        "brand": "Patek Philippe",
+        "model": "Nautilus",
+        "price": 40000,
+        "description": "The Patek Philippe Nautilus is a premium watch known for its unique design and high-quality mechanism.",
+        "rating": 4.9,
+        "image": "images/patek-nautilus.png"
+      },
+      {
+        "id": 5,
+        "brand": "Audemars Piguet",
+        "model": "Royal Oak",
+        "price": 32000,
+        "description": "The Audemars Piguet Royal Oak stands out with its luxury steel case and revolutionary design.",
+        "rating": 4.8,
+        "image": "images/audemars-royaloak.png"
+      }
+    ]
+  }
+  

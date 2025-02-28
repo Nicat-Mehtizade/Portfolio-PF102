@@ -1,7 +1,9 @@
 import Hero from "../../components/Hero"
 import ImagesSection from "../../components/ImagesSection"
+import InfoSection from "../../components/InfoSection"
 import NewArrivals from "../../components/NewArrivals"
 import WatchesSection from "../../components/WatchesSection"
+import WatchOfChoice from "../../components/WatchOfChoice"
 
 const Home = () => {
   return (
@@ -10,6 +12,8 @@ const Home = () => {
       <NewArrivals/>
       <ImagesSection/>
       <WatchesSection/>
+      <WatchOfChoice/>
+      <InfoSection/>
     </div>
   )
 }

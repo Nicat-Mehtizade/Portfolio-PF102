@@ -2,7 +2,9 @@ import { useGetDataQuery } from "../../redux/services/watchesApi";
 import type { Watch } from "../../types";
 import { CiHeart } from "react-icons/ci";
 import styles from "./index.module.css"
+import { useNavigate } from "react-router-dom";
 const WatchesSection = () => {
+  const navigate=useNavigate()
   const { data, isError, isLoading } = useGetDataQuery();
 
   if (isError) {
@@ -12,6 +14,10 @@ const WatchesSection = () => {
   if (isLoading) {
     return <p>Loading...</p>;
   }
+
+const handleDetails=(id:string | number)=>{
+  navigate(`/products/${id}`)
+}
 
   console.log(data);
   return (
@@ -41,7 +47,7 @@ const WatchesSection = () => {
                         Add to Cart
                       </button>
                     </div>
-                    <h1 className="font-bold text-xl">
+                    <h1 onClick={()=>handleDetails(p.id)} className="font-bold text-xl transition duration-300 cursor-pointer hover:text-red-500">
                       {p.brand} {p.model}
                     </h1>
                     <p className="font-semibold text-lg text-gray-700">

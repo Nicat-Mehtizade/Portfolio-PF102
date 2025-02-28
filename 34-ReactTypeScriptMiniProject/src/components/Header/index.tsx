@@ -4,9 +4,9 @@ import HeaderBtns from "./HeaderBtns";
 
 const Header = () => {
   return (
-    <div>
+    <div className="sticky top-0 z-10 bg-white shadow-xl">
       <div className="max-w-[1380px] mx-auto">
-        <div className="flex justify-between py-10 items-center">
+        <div className="flex justify-between py-8 items-center ">
             <Logo/>
             <Navigation/>
             <HeaderBtns/>

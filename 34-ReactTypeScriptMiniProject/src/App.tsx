@@ -15,9 +15,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="products" element={<Watches />}>
-            <Route path=":id" element={<Details />} />
-          </Route>
+          <Route path="products" element={<Watches />}/>
+          <Route path="products/:id" element={<Details />} />
         </Route>
         {/* Admin Layout  */}
       </Routes>

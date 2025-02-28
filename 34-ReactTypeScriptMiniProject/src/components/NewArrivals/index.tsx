@@ -29,7 +29,7 @@ const NewArrivals = () => {
               <h2 className="text-2xl font-bold text-gray-700">Thermo Ball Etip Gloves</h2>
               <p className="text-red-500 text-lg font-medium">$ 45,743</p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-4">
+            <div className="flex flex-col justify-center items-center gap-4 mb-4">
               <div className={styles.watch}>
                 <img
                   className={styles.watchImg}

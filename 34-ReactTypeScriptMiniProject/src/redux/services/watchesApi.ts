@@ -3,7 +3,7 @@ import type { Watch, WatchFormData } from "../../types";
 
 export const WatchApi = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000/",
+    baseUrl: "https://watch-api-two.vercel.app/",
   }),
   tagTypes: ["Watch"],
   endpoints: (build) => ({

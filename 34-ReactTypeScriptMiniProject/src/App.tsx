@@ -6,6 +6,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Watches from "./pages/Watches";
 import Details from "./pages/Details";
+import Favorites from "./pages/Favorites";
+import Basket from "./pages/Basket";
+import NotFound from "./pages/NotFound";
 function App() {
   return (
     <>
@@ -15,8 +18,12 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="favorites" element={<Favorites />} />
+          <Route path="basket" element={<Basket />} />
           <Route path="products" element={<Watches />}/>
           <Route path="products/:id" element={<Details />} />
+
+          <Route path="*" element={<NotFound/>}/>
         </Route>
         {/* Admin Layout  */}
       </Routes>

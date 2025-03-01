@@ -12,7 +12,7 @@ const Hero = () => {
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat is aute irure.
             </p>
-            <button className="bg-[#4A4A4B] text-white py-3 px-7 font-semibold">
+            <button className={`bg-[#4A4A4B] text-white py-3 px-7 font-semibold ${styles.button}`}>
               SHOP NOW
             </button>
           </div>

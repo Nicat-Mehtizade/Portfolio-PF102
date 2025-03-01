@@ -5,7 +5,8 @@ export interface Watch{
     price:number,
     description:string,
     rating:number,
-    image:string
+    image:string,
+    quantity?:number
 }
 
 export type WatchFormData = Omit<Watch,"id">

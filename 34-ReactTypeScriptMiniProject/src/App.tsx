@@ -9,6 +9,10 @@ import Details from "./pages/Details";
 import Favorites from "./pages/Favorites";
 import Basket from "./pages/Basket";
 import NotFound from "./pages/NotFound";
+import AdminLayout from "./Layout/AdminLayout";
+import Dashboard from "./pages/Dashboard";
+import AdminWatches from "./pages/AdminWatches";
+import AddProduct from "./pages/AddProduct";
 function App() {
   return (
     <>
@@ -20,12 +24,17 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="favorites" element={<Favorites />} />
           <Route path="basket" element={<Basket />} />
-          <Route path="products" element={<Watches />}/>
+          <Route path="products" element={<Watches />} />
           <Route path="products/:id" element={<Details />} />
 
-          <Route path="*" element={<NotFound/>}/>
+          <Route path="*" element={<NotFound />} />
         </Route>
         {/* Admin Layout  */}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="/admin/product" element={<AdminWatches/>}/>
+          <Route path="/admin/new" element={<AddProduct/>}/>
+        </Route>
       </Routes>
     </>
   );

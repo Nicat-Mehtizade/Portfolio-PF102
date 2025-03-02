@@ -1,59 +1,58 @@
 {
-    "watches": [
-      {
-        "id": 1,
-        "brand": "Rolex",
-        "model": "Submariner",
-        "price": 12500,
-        "description": "The Rolex Submariner is known for its water-resistant design and is ideal for divers.",
-        "rating": 4.8,
-        "image": "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular1.png"
-      },
-      {
-        "id": 2,
-        "brand": "Omega",
-        "model": "Speedmaster",
-        "price": 6800,
-        "description": "The Omega Speedmaster, also known as the 'Moonwatch,' was used during the Apollo missions.",
-        "rating": 4.7,
-        "image": "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular2.png"
-      },
-      {
-        "id": 3,
-        "brand": "Tag Heuer",
-        "model": "Carrera",
-        "price": 4200,
-        "description": "The Tag Heuer Carrera is a luxury sports watch inspired by motor racing.",
-        "rating": 4.5,
-        "image": "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular3.png"
-      },
-      {
-        "id": 4,
-        "brand": "Patek Philippe",
-        "model": "Nautilus",
-        "price": 40000,
-        "description": "The Patek Philippe Nautilus is a premium watch known for its unique design and high-quality mechanism.",
-        "rating": 4.9,
-        "image": "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular4.png"
-      },
-      {
-        "id": 5,
-        "brand": "Audemars Piguet",
-        "model": "Royal Oak",
-        "price": 32000,
-        "description": "The Audemars Piguet Royal Oak stands out with its luxury steel case and revolutionary design.",
-        "rating": 4.8,
-        "image": "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular5.png"
-      },
-      {
-        "id": 6,
-        "brand": "Breitling",
-        "model": "Navitimer",
-        "price": 7500,
-        "description": "The Breitling Navitimer is a legendary pilot’s watch with a built-in chronograph and aviation slide rule.",
-        "rating": 4.6,
-        "image": "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular6.png"
-      }
-    ]
-  }
-  
+  "watches": [
+    {
+      "id": 1,
+      "brand": "Rolex",
+      "model": "Submariner",
+      "price": 12500,
+      "description": "The Rolex Submariner is known for its water-resistant design and is ideal for divers.",
+      "rating": 4.8,
+      "image": "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular1.png"
+    },
+    {
+      "id": 2,
+      "brand": "Omega",
+      "model": "Speedmaster",
+      "price": 6800,
+      "description": "The Omega Speedmaster, also known as the 'Moonwatch,' was used during the Apollo missions.",
+      "rating": 4.7,
+      "image": "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular2.png"
+    },
+    {
+      "id": 3,
+      "brand": "Tag Heuer",
+      "model": "Carrera",
+      "price": 4200,
+      "description": "The Tag Heuer Carrera is a luxury sports watch inspired by motor racing.",
+      "rating": 4.5,
+      "image": "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular3.png"
+    },
+    {
+      "id": 4,
+      "brand": "Patek Philippe",
+      "model": "Nautilus",
+      "price": 40000,
+      "description": "The Patek Philippe Nautilus is a premium watch known for its unique design and high-quality mechanism.",
+      "rating": 4.9,
+      "image": "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular4.png"
+    },
+    {
+      "id": 5,
+      "brand": "Audemars Piguet",
+      "model": "Royal Oak",
+      "price": 32000,
+      "description": "The Audemars Piguet Royal Oak stands out with its luxury steel case and revolutionary design.",
+      "rating": 4.8,
+      "image": "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular5.png"
+    },
+    {
+      "id": 6,
+      "brand": "Breitling",
+      "model": "Navitimer",
+      "price": 7500,
+      "description": "The Breitling Navitimer is a legendary pilot’s watch with a built-in chronograph and aviation slide rule.",
+      "rating": 4.6,
+      "image": "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular6.png"
+    }
+  ]
+}

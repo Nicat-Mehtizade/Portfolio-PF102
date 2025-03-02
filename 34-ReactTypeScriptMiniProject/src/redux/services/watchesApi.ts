@@ -3,7 +3,7 @@ import type { Watch, WatchFormData } from "../../types";
 
 export const WatchApi = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://watch-api-two.vercel.app/",
+    baseUrl: "http://localhost:3000/",
   }),
   tagTypes: ["Watch"],
   endpoints: (build) => ({
@@ -19,6 +19,7 @@ export const WatchApi = createApi({
         url: `watches/${id}`,
         method: "DELETE",
       }),
+      invalidatesTags: ["Watch"]
     }),
     addNewData: build.mutation<Watch, WatchFormData>({
       query: (newData) => ({
@@ -27,6 +28,14 @@ export const WatchApi = createApi({
         body: newData,
       }),
     }),
+    editData:build.mutation<void,{id:string | number, editedProduct:Partial<Watch>}>({
+      query: ({id,editedProduct})=>({
+        url:`watches/${id}`,
+        method:"PATCH",
+        body: editedProduct
+      }),
+      invalidatesTags: ["Watch"]
+    })
   }),
 });
 
@@ -35,4 +44,5 @@ export const {
   useGetDataByIdQuery,
   useDeleteDataByIdMutation,
   useAddNewDataMutation,
+  useEditDataMutation
 } = WatchApi;

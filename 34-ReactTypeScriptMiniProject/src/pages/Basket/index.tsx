@@ -6,12 +6,13 @@ import {
   increment,
   removeFromBasket,
 } from "../../redux/features/BasketSlice";
+import type { RootState } from "./../../redux/App/store"
 
 const Basket = () => {
   const basket = useSelector((state: RootState) => state.basket.items);
   const dispatch = useDispatch();
   const totalPrice = basket
-    .reduce((acc: number, item: Watch) => acc + item.price * item.quantity, 0)
+    .reduce((acc: number, item: Watch) => acc + item.price * (item.quantity ?? 1), 0)
     .toFixed(2);
   return (
     <div>
@@ -82,7 +83,7 @@ const Basket = () => {
                         </div>
                       </td>
                       <td className="p-2 text-gray-500 text-xs w-28">
-                        ${(item.price * item.quantity).toFixed(2)}
+                        ${(item.price * (item.quantity ?? 1)).toFixed(2)}
                       </td>
                       <td className="p-2 w-24">
                         <button

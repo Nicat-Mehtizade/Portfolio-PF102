@@ -7,13 +7,13 @@ import { IoMdHeart } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
 import { addToBasket } from "../../redux/features/BasketSlice";
 import { useEffect, useState } from "react";
-
+import type { RootState } from "./../../redux/App/store"
 const Watches = () => {
   const navigate = useNavigate();
   const { data, isError, isLoading } = useGetDataQuery();
   const favs = useSelector((state: RootState) => state.favorites.items);
   const basket = useSelector((state: RootState) => state.basket.items);
-  const [category, setCategory] = useState([]);
+  const [category, setCategory] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [searchValue, setSearchValue] = useState("");
   const [filteredProducts, setFilteredProducts] = useState<Watch[]>([]);

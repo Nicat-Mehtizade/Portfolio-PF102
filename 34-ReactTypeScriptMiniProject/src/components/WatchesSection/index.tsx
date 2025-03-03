@@ -4,10 +4,10 @@ import { CiHeart } from "react-icons/ci";
 import styles from "./index.module.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@reduxjs/toolkit/query";
 import { toggleFavs } from "../../redux/features/FavoritesSlice";
 import { IoMdHeart } from "react-icons/io";
 import { addToBasket } from "../../redux/features/BasketSlice";
+import { RootState } from "../../redux/App/store";
 const WatchesSection = () => {
   const navigate = useNavigate();
   const { data, isError, isLoading } = useGetDataQuery();

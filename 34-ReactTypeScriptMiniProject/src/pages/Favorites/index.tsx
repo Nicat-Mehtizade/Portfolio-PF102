@@ -1,9 +1,9 @@
 import { IoMdHeart } from "react-icons/io";
 import { Watch } from "../../types";
-import { CiHeart } from "react-icons/ci";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleFavs } from "../../redux/features/FavoritesSlice";
 import { useNavigate } from "react-router-dom";
+import type { RootState } from "./../../redux/App/store"
 
 const Favorites = () => {
   const favs = useSelector((state: RootState) => state.favorites.items);

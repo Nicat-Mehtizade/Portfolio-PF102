@@ -1,8 +1,8 @@
-import { RootState } from "@reduxjs/toolkit/query";
 import { CiHeart } from "react-icons/ci";
 import { IoCart } from "react-icons/io5";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import type { RootState } from "./../../../redux/App/store"
 
 const HeaderBtns = () => {
   const favs=useSelector((state:RootState)=>state.favorites.items)

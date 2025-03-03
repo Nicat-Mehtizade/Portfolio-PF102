@@ -60,9 +60,10 @@ const AdminProducts = () => {
     setIsModalOpen(false);
   };
 
-const handleDelete=async(id)=>{
+const handleDelete=async(id:string | number)=>{
   try {
     const response=await deleteProduct(id)
+    console.log(response);
   } catch (error) {
     console.log(error);
   }

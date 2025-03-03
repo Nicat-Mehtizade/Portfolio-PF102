@@ -20,6 +20,7 @@ const AddProduct = () => {
     onSubmit: async ( values, {resetForm}) => {
       try {
         const response= await AddProduct(values)
+        console.log(response);
         resetForm()
       } catch (error) {
         console.log(error);

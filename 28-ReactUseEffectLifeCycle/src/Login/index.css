@@ -1,0 +1,21 @@
+.loginBtn{
+    background-color: lightskyblue;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+    font-weight: 700;
+    transition: 0.3s;
+}
+.loginBtn:hover{
+background-color: blue;
+}
+.validation{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.header{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}

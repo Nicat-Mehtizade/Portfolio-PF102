@@ -1,0 +1,11 @@
+.logoutBtn{
+    background-color: red;
+    color: white;
+    font-weight: 700;
+    height: 40px;
+    border: none;
+    transition: 0.3s;
+}
+.logoutBtn:hover{
+    background-color: orangered;
+}

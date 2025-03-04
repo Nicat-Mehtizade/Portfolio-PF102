@@ -1,0 +1,12 @@
+.deleteBtn{
+    background-color: crimson;
+    color: white;
+    border: none;
+    font-weight: 700;
+    height: 35px;
+    width: 70px;
+    transition: 0.3s;
+}
+.deleteBtn:hover{
+    background-color: red;
+}

@@ -1,0 +1,12 @@
+:root {
+  font-family: "Poppins", serif;
+  color: rgba(255, 255, 255, 0.87);
+  --bs-body-bg: #242424 !important;
+  --bs-body-color: rgba(255, 255, 255, 0.87) !important; 
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

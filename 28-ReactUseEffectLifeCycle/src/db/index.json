@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "name": "Product 2",
+      "price": 15.99,
+      "isDiscounted": true
+    },
+    {
+      "id": "8hwX2p21",
+      "isDiscounted": true,
+      "name": "Product 5",
+      "price": 18.99
+    },
+    {
+      "id": "ITeD6sL2",
+      "isDiscounted": false,
+      "name": "",
+      "price": 0
+    },
+    {
+      "id": "JuYfFNie",
+      "isDiscounted": true,
+      "name": "Sed consequatur Aut",
+      "price": 29
+    },
+    {
+      "id": "bSJViN6t",
+      "isDiscounted": true,
+      "name": "Sed consequatur Aut",
+      "price": 39
+    },
+    {
+      "id": "Fp7RHrDR",
+      "isDiscounted": true,
+      "name": "Sed consequatur Aut",
+      "price": 39
+    },
+    {
+      "id": "TulG4W6g",
+      "isDiscounted": true,
+      "name": "Sed consequatur Aut",
+      "price": 39
+    },
+    {
+      "id": "th4GaMWW5duQdWdEaA8rA",
+      "name": "sada",
+      "price": 4,
+      "isDiscounted": false
+    }
+  ]
+}

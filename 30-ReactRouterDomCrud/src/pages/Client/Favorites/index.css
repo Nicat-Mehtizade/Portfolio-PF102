@@ -1,0 +1,26 @@
+.validation{
+    color: red;
+    height: 85vh;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productContainer{
+    padding: 20px 0px;
+}
+.clearAllBtn{
+    background-color: red;
+    border: none;
+    color:  white;
+    padding: 10px 15px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.clearAllBtn:hover{
+    background-color: rgb(209, 16, 16);
+}

@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+.active{
+    color: orange;
+    border-bottom: 2px solid black;
+    transition: 0.3s;
+}

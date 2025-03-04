@@ -1,0 +1,30 @@
+.detailProduct{
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.detailImage{
+    width: 50%;
+    max-height: 600px;
+
+}
+.detailRightSide{
+    width: 50%;
+
+}
+.highlight{
+    font-weight: 600;
+    margin-right: 5px;
+    color: orange;
+    font-size: 20px;
+}
+.detailRate{
+    display: flex;
+    align-items: center;
+}
+.star{
+    color: rgb(235, 235, 15);
+    font-size: 20px;
+}

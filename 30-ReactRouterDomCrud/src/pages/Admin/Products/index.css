@@ -1,0 +1,50 @@
+.adminImage {
+  width: 50px;
+}
+.adminProducts {
+  padding: 40px 0px;
+}
+.adminProductTitle,
+.adminProductPrice,
+.adminProductDesc {
+  font-size: 12px;
+}
+.adminProductTitle {
+  width: 20%;
+}
+td {
+  text-align: center;
+  border-bottom: 1px solid #666;
+  padding: 10px;
+}
+
+.adminP {
+  margin-bottom: 10px;
+}
+.editBtn {
+  margin-right: 10px;
+  background-color: rgb(28, 212, 28);
+
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.editBtn:hover {
+  background-color: green;
+}
+.deleteBtn {
+  margin-right: 10px;
+  background-color: red;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.deleteBtn:hover {
+  background-color: rgb(165, 11, 11);
+}

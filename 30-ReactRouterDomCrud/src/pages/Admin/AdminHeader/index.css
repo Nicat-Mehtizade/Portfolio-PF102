@@ -1,0 +1,41 @@
+.adminHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+  }
+
+  .adminTitle {
+    font-size: 35px;
+    font-weight: 700;
+  }
+  .adminNav {
+    display: flex;
+    gap: 15px;
+    a {
+      text-decoration: none;
+      color: black;
+      transition: 0.3s ease-in-out;
+      font-size: 18px;
+    }
+    a:hover{
+      background-color: #7777777e;
+    }
+  }
+  .adminNav .active {
+      color: orange;
+      border-bottom: 2px solid black;
+  }
+  .clientBtn{
+    background-color: red;
+    border-radius: 8px;
+  
+  }
+  .clientBtn:hover{
+    background-color: rgb(180, 16, 16) !important;
+  }
+
+  .adminSide{
+    box-shadow: 5px 10px 18px #888888;
+    background-color: white;
+}

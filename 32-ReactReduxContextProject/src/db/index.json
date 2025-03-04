@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Plaid Shorts",
+      "description": "Comfortable plaid shorts with elastic waistband",
+      "price": 40,
+      "discount": 24,
+      "rating": 3,
+      "category": "Shorts",
+      "image": "https://preview.colorlib.com/theme/estore/assets/img/categori/product1.png",
+      "isNew": true
+    },
+    {
+      "id": 2,
+      "name": "Green Sweatshirt",
+      "description": "Casual green sweatshirt with 'Too Cool for Mondays' text",
+      "price": 40,
+      "discount": 35,
+      "rating": 3,
+      "category": "Sweatshirts",
+      "image": "https://preview.colorlib.com/theme/estore/assets/img/categori/product2.png",
+      "isNew": false
+    },
+    {
+      "id": 3,
+      "name": "Yellow Knit Sweater",
+      "description": "Oversized yellow knit sweater with balloon sleeves",
+      "price": 40,
+      "discount": 33,
+      "rating": 4,
+      "category": "Sweaters",
+      "image": "https://preview.colorlib.com/theme/estore/assets/img/categori/product3.png",
+      "isNew": true
+    },
+    {
+      "id": 4,
+      "name": "Mesh Sweater",
+      "description": "Lightweight mesh sweater for layering",
+      "price": 40,
+      "discount": 25,
+      "rating": 2,
+      "category": "Sweaters",
+      "image": "https://preview.colorlib.com/theme/estore/assets/img/categori/product4.png",
+      "isNew": false
+    },
+    {
+      "id": 5,
+      "name": "Black Joggers",
+      "description": "Casual black joggers with drawstring waist",
+      "price": 40,
+      "discount": 20,
+      "rating": 1,
+      "category": "Pants",
+      "image": "https://preview.colorlib.com/theme/estore/assets/img/categori/product5.png",
+      "isNew": false
+    },
+    {
+      "id": 6,
+      "name": "Denim Blazer",
+      "description": "Stylish denim blazer for casual or formal wear",
+      "price": 40,
+      "discount": 13,
+      "rating": 3,
+      "category": "Blazers",
+      "image": "https://preview.colorlib.com/theme/estore/assets/img/categori/product6.png",
+      "isNew": true
+    }
+  ]
+}

@@ -11,6 +11,7 @@ import AddProduct from "./pages/Admin/AddProduct"
 import About from "./pages/Client/About";
 import Contact from "./pages/Client/Contact";
 import Favorites from "./pages/Client/Favorites";
+import Basket from "./pages/Client/Basket";
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact/>} />
           <Route path="favorites" element={<Favorites/>} />
+          <Route path="basket" element={<Basket/>} />
           <Route path="products">
             <Route index element={<Products />} />
             <Route path=":id" element={<ProductDetails />} />

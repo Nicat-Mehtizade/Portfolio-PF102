@@ -7,6 +7,7 @@ import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { FavoritesContext } from "../../../Context/FavoritesContext";
 import toast, { Toaster } from "react-hot-toast";
+import { BasketContext } from "../../../Context/BasketContext";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -15,7 +16,9 @@ const Products = () => {
   const [sort, setSort] = useState("");
   const navigate = useNavigate();
   const { favs, toggleFavs } = useContext(FavoritesContext);
-
+  const {basket,addBasket}=useContext(BasketContext)
+  
+console.log(basket);
   const notify = () => toast.success("Added Successfully");
 
   const getProducts = async () => {
@@ -78,13 +81,13 @@ const Products = () => {
 
       <div className="container">
         <div className="products">
-          <h1 className="productsTitle">Products</h1>
+          <h1 className="productsTitle text-2xl font-bold">Products</h1>
           <div className="searchBar">
             <input
               onChange={(e) => {
                 setInputValue(e.target.value);
               }}
-              className="search"
+              className="search border-1"
               type="text"
               placeholder="Enter the product name."
             />
@@ -92,7 +95,7 @@ const Products = () => {
               onChange={(e) => {
                 setSort(e.target.value);
               }}
-              className="select"
+              className="select border-1"
             >
               <option selected disabled>
                 select sort order
@@ -134,6 +137,7 @@ const Products = () => {
                     {p.description.slice(0, 100) + "..."}
                   </p>
                   <p className="productPrice">Price: {p.price}$</p>
+                  <button onClick={()=>addBasket(p)} className="border-1 rounded-lg font-medium !p-1 !mb-2 text-black transition duration-300 hover:bg-black hover:text-white">Add to Cart</button>
                 </div>
               ))
             ) : (

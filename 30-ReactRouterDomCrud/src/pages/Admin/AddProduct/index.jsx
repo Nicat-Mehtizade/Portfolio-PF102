@@ -1,93 +1,90 @@
-import { useState } from "react";
+import { useFormik } from "formik";
 import "./index.css";
 import { BASE_URL } from "../../../constants";
 import axios from "axios";
-const AddProduct = () => {
-  const [newProduct, setNewProduct] = useState({
-    title: "",
-    price: 0,
-    image: "",
-    description: "",
-  });
-  const handleAddProduct = async (e) => {
-    e.preventDefault();
-    console.log(newProduct);
-    try {
-      const response = await axios.post(`${BASE_URL}products`, newProduct);
-      setNewProduct({
-        title: "",
-        price: 0,
-        image: "",
-        description: "",
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
+import { bookValidationSchema } from "./validation";
+const AddBook = () => {
+  const formik = useFormik({
+    initialValues: {
+      title: "",
+      price: "",
+      description: "",
+      image: "",
+    },
+    validationSchema: bookValidationSchema,
+    onSubmit: async (values, { resetForm }) => {
+      console.log(values);
+      try {
+        const response = await axios.post(`${BASE_URL}products`, values);
 
+        resetForm();
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  });
   return (
-    <div>
-      <div className="container">
-        <div className="addProduct">
-          <div className="add">
-            <h2>Add New Product</h2>
-            <form onSubmit={handleAddProduct} action="">
-              <label htmlFor="title">Title</label>
-              <input
-                type="text"
-                name="title"
-                id="title"
-                required
-                value={newProduct.title}
-                onChange={(e) => {
-                  setNewProduct({ ...newProduct, title: e.target.value });
-                }}
-              />
-              <label htmlFor="Price">Price</label>
-              <input
-                type="number"
-                name="Price"
-                id="Price"
-                required
-                value={newProduct.price}
-                onChange={(e) =>
-                  setNewProduct({
-                    ...newProduct,
-                    price: Number(e.target.value),
-                  })
-                }
-              />
-              <label htmlFor="image">Image URL</label>
-              <input
-                type="text"
-                name="image"
-                id="image"
-                required
-                value={newProduct.image}
-                onChange={(e) =>
-                  setNewProduct({ ...newProduct, image: e.target.value })
-                }
-              />
-              <label htmlFor="Description">Description</label>
-              <input
-                type="text"
-                name="Description"
-                id="Description"
-                required
-                value={newProduct.description}
-                onChange={(e) =>
-                  setNewProduct({ ...newProduct, description: e.target.value })
-                }
-              />
-              <button className="addBtn" type="submit">
-                Add Product
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
+    <div className="w-[100%] border-1 parentDiv">
+      <form
+        onSubmit={formik.handleSubmit}
+        className="flex flex-col w-[25%] justify-center items-center"
+      >
+        <label htmlFor="title">Title</label>
+        <input
+          id="title"
+          name="title"
+          type="text"
+          className="border-1"
+          onChange={formik.handleChange}
+          value={formik.values.title}
+        />
+        {formik.touched.title && formik.errors.title ? (
+          <div className="text-red-500">{formik.errors.title}</div>
+        ) : null}
+
+        <label htmlFor="price">Price</label>
+        <input
+          className="border-1"
+          id="price"
+          name="price"
+          type="number"
+          onChange={formik.handleChange}
+          value={formik.values.price}
+        />
+        {formik.touched.price && formik.errors.price ? (
+          <div className="text-red-500">{formik.errors.price}</div>
+        ) : null}
+
+        <label htmlFor="description">Description</label>
+        <input
+          id="description"
+          name="description"
+          className="border-1 input"
+          type="text"
+          onChange={formik.handleChange}
+          value={formik.values.description}
+        />
+        {formik.touched.description && formik.errors.description ? (
+          <div className="text-red-500">{formik.errors.description}</div>
+        ) : null}
+        <label htmlFor="image">Image</label>
+        <input
+          id="image"
+          name="image"
+          className="border-1 input"
+          type="text"
+          onChange={formik.handleChange}
+          value={formik.values.image}
+        />
+        {formik.touched.image && formik.errors.image ? (
+          <div className="text-red-500">{formik.errors.image}</div>
+        ) : null}
+        <button className="border-1 rounded-lg submitBtn" type="submit">
+          Submit
+        </button>
+      </form>
     </div>
   );
 };
 
-export default AddProduct;
+export default AddBook;

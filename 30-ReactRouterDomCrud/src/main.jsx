@@ -3,11 +3,14 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router";
 import FavoritesProvider from "./Context/FavoritesContext/index.jsx";
+import BasketProvider from "./Context/BasketContext/index.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <FavoritesProvider>
-      <App />
+      <BasketProvider>
+        <App />
+      </BasketProvider>
     </FavoritesProvider>
   </BrowserRouter>
 );

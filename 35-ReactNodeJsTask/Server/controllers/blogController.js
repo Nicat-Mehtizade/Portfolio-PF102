@@ -45,12 +45,19 @@ const deleteBlog=async (req,res)=>{
 }
 
 const addBlog=async (req, res)=>{
-//  const imageUrl = `http://localhost:8000/${req.file.path}`
+ const imageUrl = `http://localhost:8000/${req.file.path}`
+ console.log(imageUrl);
+ console.log("Req.body:", req.body);
+ console.log("Req.file:", req.file);
     try {
-        const newBlog= await Blog.create({...req.body })
+        const newBlog= await Blog.create({
+            title: req.body.title,
+            content: req.body.content,
+            categoryId: req.body.categoryId,
+            image: imageUrl, })
 
         await newBlog.save()
-        res.status(200).json({
+        res.status(201).json({
             data:newBlog,
             message: "Successfully added"
         })

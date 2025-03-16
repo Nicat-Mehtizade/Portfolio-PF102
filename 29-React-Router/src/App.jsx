@@ -12,15 +12,20 @@ function App() {
 
   return (
     <BrowserRouter>
-     <Header/>
-     <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/about' element={<About/>}/>
-      <Route path='/contact' element={<Contact/>}/>
-      <Route path='/post/:id' element={<BlogDetails/>}/>
-     </Routes>
-     <Footer/>
-     </BrowserRouter>
+      <Header />
+      <Routes>
+
+
+        <Route path='/'>
+          <Route index element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/post/:id' element={<BlogDetails />} />
+        </Route>
+        <Route path='*' element={<div>404 Not Found</div>} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   )
 }
 

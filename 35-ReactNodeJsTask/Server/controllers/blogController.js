@@ -2,7 +2,15 @@ const Blog = require("../models/blogSchema");
 
 const getAllBlogs = async (req, res) => {
   try {
-    const blogs=await Blog.find()
+    let {title,sortBy,order}=req.query
+
+    let filter={}
+    const blogs=await Blog.find(title ?{
+        title: {
+            $regex: title,
+            $options: "i"
+        }
+    } : {}).sort({[sortBy] : order==="asc" ? 1 :-1})
     .populate("categoryId", "title productCount")
     res.status(200).json({
         data:blogs

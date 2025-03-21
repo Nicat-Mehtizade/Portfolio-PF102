@@ -6,6 +6,7 @@ const conntectDb=require("./config/db")
 const blogRouter=require("./routes/blogRouter")
 const commentRouter=require("./routes/commentRouter")
 const userRouter=require("./routes/userRouter")
+const authRouter=require("./routes/authRouter")
 const path=require("path")
 
 dotenv.config()
@@ -18,6 +19,7 @@ app.use(express.json())
 app.use("/api/blogs", blogRouter)
 app.use("/api/comments", commentRouter)
 app.use("/api/users" , userRouter)
+app.use("/api", authRouter)
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 

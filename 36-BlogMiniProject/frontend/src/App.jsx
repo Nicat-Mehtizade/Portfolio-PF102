@@ -7,6 +7,7 @@ import PrivateRoute from "./companents/PriveteRoute";
 import ClientLayout from "./layout/Client";
 import AdminLayout from "./layout/Admin";
 import AdminBlog from "./pages/AdminBlog";
+import Details from "./pages/Details";
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
 
         <Route path="/" element={<ClientLayout />}>
           <Route index element={<Home />} />
+          <Route path="/blogs/:id" element={<Details/>}/>
         </Route>
 
         <Route path="/" element={<PrivateRoute roles={["admin"]} />} >

@@ -4,9 +4,12 @@ import { BASE_URL } from "../../constants";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
+import { useState } from "react";
+import { FaUser } from "react-icons/fa";
 
 const Signup = () => {
-    const nav=useNavigate()
+  const nav = useNavigate();
+  const [role, setRole] = useState("user");
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -15,21 +18,21 @@ const Signup = () => {
     },
     onSubmit: async (values) => {
       try {
-        const response = await axios.post(`${BASE_URL}/register`, values);
+        const response = await axios.post(`${BASE_URL}/register`, {...values, role});
         console.log(response.data);
 
         if (response.data.status == "success") {
           toast.success("Registered Successfully!", {
             duration: 2000,
           });
-          setTimeout(()=>{
-            nav("/login")
-          },2000)
+          setTimeout(() => {
+            nav("/login");
+          }, 2000);
         }
       } catch (error) {
         console.error("Error registering:", error);
-        toast.error("Registration failed. Please try again.",{
-            duration:2000
+        toast.error("Registration failed. Please try again.", {
+          duration: 2000,
         });
       }
     },
@@ -38,8 +41,8 @@ const Signup = () => {
     <div>
       <Toaster position="top-center" reverseOrder={false} />
       <div className="max-w-[1280px] mx-auto">
-        <div className="flex flex-col justify-center items-center gap-3 my-9">
-          <div className="max-w-md w-full px-5 py-10 flex flex-col gap-4 shadow-[0px_12px_24px_rgba(0,0,0,0.35)] rounded-lg">
+        <div className="flex flex-col justify-center items-center gap-3 my-4">
+          <div className="max-w-md w-full px-5 py-10 flex flex-col gap-2 shadow-[0px_12px_24px_rgba(0,0,0,0.35)] rounded-lg">
             <h1 className="text-2xl font-bold text-center">Welcome</h1>
             <p className="text-center text-gray-500 text-sm">
               Sign in to your account or create a new one
@@ -65,6 +68,28 @@ const Signup = () => {
               >
                 Register
               </NavLink>
+            </div>
+            <div className="flex items-center justify-center gap-3 ">
+              <button
+                onClick={() => setRole("user")}
+                className={`border p-2 rounded-lg cursor-pointer text-2xl ${
+                  role === "user" ? "bg-gray-200 scale-95 " : ""
+                }`}
+              >
+                <FaUser className={`text-2xl ${role === "user" ? "scale-90" : ""}`} />
+              </button>
+              <button
+                onClick={() => setRole("author")}
+                className={`border p-0.5 rounded-lg cursor-pointer ${
+                  role === "author" ? "bg-gray-200 scale-95" : ""
+                }`}
+              >
+                <img
+                 className={`w-8.5 ${role === "author" ? "scale-90" : ""}`}
+                  src="https://png.pngtree.com/png-clipart/20230418/original/pngtree-writer-line-icon-png-image_9064913.png"
+                  alt="author"
+                />
+              </button>
             </div>
             <div>
               <form

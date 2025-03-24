@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import axios from "axios";
 import { BASE_URL } from "../../constants";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { Navigate, NavLink, useNavigate } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
@@ -24,6 +24,7 @@ const Login = () => {
           setTimeout(() => {
             setToken(response.data.token);
             localStorage.setItem("token" , response.data.token)
+            localStorage.setItem("tokenExpiredDate" , Date.now() + 3600000)
             console.log(response.data.token);
             nav("/");
           }, 2000);
@@ -36,6 +37,18 @@ const Login = () => {
       }
     },
   });
+
+  useEffect(()=>{
+    const token=localStorage.getItem("token")
+    const expiredDate=localStorage.getItem("tokenExpiredDate")
+
+    if(token && expiredDate && Date.now() > Number(expiredDate)){
+      localStorage.removeItem("token")
+      localStorage.removeItem("tokenExpiredDate")
+      setToken(null)
+      nav("/login");
+    }
+  },[])
   return (
     <div>
       <Toaster position="top-center" reverseOrder={false} />

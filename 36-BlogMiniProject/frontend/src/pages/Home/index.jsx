@@ -7,11 +7,12 @@ import { CiCircleMinus } from "react-icons/ci";
 import { MdOutlineBookmarkAdd } from "react-icons/md";
 import { BsThreeDots } from "react-icons/bs";
 import { FaPlus } from "react-icons/fa6";
-import {NavLink, useNavigate} from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom";
+import { SlNote } from "react-icons/sl";
 
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const getAllBlogs = async () => {
     try {
       const response = await axios(`${BASE_URL}/blogs`);
@@ -26,26 +27,33 @@ const Home = () => {
     getAllBlogs();
   }, []);
 
-  const handleDetails=(id)=>{
-    navigate(`/blogs/${id}`)
-  }
+  const handleDetails = (id) => {
+    navigate(`/blogs/${id}`);
+  };
   return (
     <div>
       <div className="max-w-[1380px] mx-auto">
         <div className="flex gap-15">
           <div className="lg:w-[60%] mx-10 lg:ml-30  py-10">
-            <div className="flex border-b-1 border-gray-300 font-semibold mb-10 text-sm items-center gap-7 text-gray-500">
-            <FaPlus />
+            <div className="flex border-b-1 border-gray-300 justify-between font-semibold mb-10 text-sm items-center text-gray-500">
+              <div className="flex items-center gap-4 md:gap-7">
+              <FaPlus />
             <p className="text-black border-b-1 py-5">For you</p>
             <p>Following</p>
-            <p>Featured <span className="text-white bg-green-700 p-0.5 rounded-sm text-xs">New</span></p>
-            <p>React</p>
-            <p>Coding</p>
+            <p className="hidden sm:block">Featured <span className="text-white bg-green-700 p-0.5 rounded-sm text-xs">New</span></p>
+            <p className="hidden sm:block">React</p>
+            <p className="hidden sm:block">Coding</p>
+              </div>
+              <div className="flex items-center gap-2 cursor-pointer">
+                <SlNote className="text-xl text-gray-500" />
+                <p className="text-gray-500">Write</p>
+              </div>
             </div>
             {blogs ? (
               blogs.map((blog) => {
                 return (
-                  <div onClick={()=>handleDetails(blog._id)}
+                  <div
+                    onClick={() => handleDetails(blog._id)}
                     className="border-b-1 py-5 cursor-pointer border-gray-200"
                     key={blog._id}
                   >
@@ -82,9 +90,9 @@ const Home = () => {
                         </div>
                       </div>
                       <div className="text-gray-500 flex gap-1 md:gap-4 text-2xl">
-                        <CiCircleMinus className="cursor-pointer" />
-                        <MdOutlineBookmarkAdd className="cursor-pointer" />
-                        <BsThreeDots className="cursor-pointer" />
+                        <CiCircleMinus className="cursor-pointer hover:text-black" />
+                        <MdOutlineBookmarkAdd className="cursor-pointer hover:text-black" />
+                        <BsThreeDots className="cursor-pointer hover:text-black" />
                       </div>
                     </div>
                   </div>
@@ -94,8 +102,7 @@ const Home = () => {
               <p>There is no blog,yet!</p>
             )}
           </div>
-          <div className="hidden lg:block border-l-1 border-gray-200 w-[35%]">
-          </div>
+          <div className="hidden lg:block border-l-1 border-gray-200 w-[35%]"></div>
         </div>
       </div>
     </div>

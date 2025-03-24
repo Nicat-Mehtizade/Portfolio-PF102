@@ -5,7 +5,7 @@ const storage = multer.diskStorage({
     cb(null, "uploads/");
   },
   filename: function (req, file, cb) {
-    const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1E9);
+    const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
     cb(null, uniqueSuffix + "-" + file.originalname);
   },
 });
@@ -17,11 +17,15 @@ const upload = multer({
       file.mimetype === "image/jpeg" ||
       file.mimetype === "image/jpg" ||
       file.mimetype === "image/png" ||
-      file.mimetype === "image/gif"
+      file.mimetype === "image/gif" ||
+      file.mimetype === "image/webp"
     )
       cb(null, true);
     else {
-      cb(new Error(`Only .jpeg |.jpg |.png | .gif files are allowed  `), false);
+      cb(
+        new Error(`Only .jpeg |.jpg |.png | .gif | .webp files are allowed  `),
+        false
+      );
     }
   },
 });

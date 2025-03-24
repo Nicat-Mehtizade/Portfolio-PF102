@@ -1,8 +1,13 @@
 import { CiSearch } from "react-icons/ci";
-import { SlNote } from "react-icons/sl";
 import { IoNotificationsOutline } from "react-icons/io5";
-import {NavLink} from "react-router-dom"
+import {NavLink, useNavigate} from "react-router-dom"
 const Header = () => {
+  const token= localStorage.getItem("token")
+  const navigate=useNavigate()
+  const handleLogout=()=>{
+    localStorage.removeItem("token")
+    navigate("/login")
+  }
   return (
     <div className="border border-b-1 border-gray-200">
       <div className="max-w-[1400px] mx-auto">
@@ -15,10 +20,8 @@ const Header = () => {
           </div>
          </div>
          <div className="flex justify-center items-center gap-2 md:gap-5">
-            <div className="flex items-center gap-2 cursor-pointer">
-            <SlNote  className="text-xl text-gray-500 hidden sm:block"/>
-            <p className="text-gray-500 hidden sm:block">Write</p>
-            </div>
+            <NavLink to={"/login"} className={`text-gray-500 transition duration-300 hover:text-gray-300 ${token ? "hidden ": ""}`}>Login</NavLink>
+            <button onClick={handleLogout} className={`cursor-pointer text-gray-500 transition duration-300 hover:text-black ${!token ? "hidden": ""}`}>Log Out</button>
             <IoNotificationsOutline className="text-2xl text-gray-500 hidden sm:block cursor-pointer"/>
          </div>
         </div>

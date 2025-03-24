@@ -9,11 +9,12 @@ import { MdOutlineBookmarkAdd } from "react-icons/md";
 import { BsThreeDots } from "react-icons/bs";
 import { MdOutlinePlayCircle } from "react-icons/md";
 import { PiUploadSimple } from "react-icons/pi";
-
 const Details = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState({});
   const [loading, setLoading] = useState(true);
+
+  const token = localStorage.getItem("token");
 
   const getBlogById = async () => {
     try {
@@ -29,13 +30,37 @@ const Details = () => {
   useEffect(() => {
     getBlogById();
     console.log(blog);
-  }, []);
+  }, [id]);
 
   if (loading) {
     return <p className="font-bold text-3xl text-center py-10">Loading...</p>;
   }
 
-  console.log(blog);
+  const handleLike = async (blogId) => {
+    try {
+      if (!token) {
+        console.log("Token missing");
+        return;
+      }
+      console.log(token);
+
+      const response = await axios.post(
+        `${BASE_URL}/likes/${blogId}`,
+        {},
+        {
+          headers: {
+            Authorization: `${token}`,
+          },
+        }
+      );
+      console.log(response.data);
+      getBlogById()
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  // console.log(blog);
   return (
     <div>
       <div className="max-w-[780px] mx-auto">
@@ -72,19 +97,22 @@ const Details = () => {
           <div>
             <div className="border-t-1 border-b-1 border-gray-200 flex justify-between py-5">
               <div className="flex items-center gap-5">
-                <div className="flex gap-1 items-center">
+                <button
+                  onClick={() => handleLike(blog._id)}
+                  className="flex gap-1 items-center cursor-pointer"
+                >
                   <PiHandsClapping className="text-gray-600" />
                   <span className="text-gray-500">{blog.likes.length}</span>
-                </div>
+                </button>
                 <div>
                   <FaRegComment className="text-gray-600" />
                 </div>
               </div>
               <div className="text-gray-500 flex gap-1 md:gap-4 text-2xl">
-                <MdOutlineBookmarkAdd className="cursor-pointer" />
-                <MdOutlinePlayCircle className="cursor-pointer" />
-                <PiUploadSimple className="cursor-pointer" />
-                <BsThreeDots className="cursor-pointer" />
+                <MdOutlineBookmarkAdd className="cursor-pointer hover:text-black" />
+                <MdOutlinePlayCircle className="cursor-pointer hover:text-black" />
+                <PiUploadSimple className="cursor-pointer hover:text-black" />
+                <BsThreeDots className="cursor-pointer hover:text-black" />
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ const Blog = require("../models/blogSchema");
 
 const getAllBlogs = async (req, res) => {
   try {
-    const blogs = await Blog.find({});
+    const blogs = await Blog.find({}).populate("author","username email");
 
     if (!blogs) {
       return res.status(404).json({ message: "Blogs not found!" });
@@ -20,7 +20,7 @@ const getAllBlogs = async (req, res) => {
 const getBlogById = async (req, res) => {
   const { id } = req.params;
   try {
-    const blog = await Blog.findById(id);
+    const blog = await Blog.findById(id).populate("author","username email");;
 
     if (!blog) {
       return res.status(404).json({ message: "Blog not found!" });
@@ -62,7 +62,11 @@ const editBlog = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const updatedBlog = await Blog.findByIdAndUpdate(id, { ...req.body }, {new:true});
+    const updatedBlog = await Blog.findByIdAndUpdate(
+      id,
+      { ...req.body },
+      { new: true }
+    );
 
     if (!updatedBlog) {
       return res.status(404).json({
@@ -85,7 +89,12 @@ const editBlog = async (req, res) => {
 const addBlog = async (req, res) => {
   const imageUrl = `http://localhost:8000/${req.file.path}`;
   try {
-    const addedBlog = await Blog.create({ ...req.body, image: imageUrl });
+    const author = req.user.id;
+    const addedBlog = await Blog.create({
+      ...req.body,
+      image: imageUrl,
+      author,
+    });
     await addedBlog.save();
     res.status(201).json({
       data: addedBlog,

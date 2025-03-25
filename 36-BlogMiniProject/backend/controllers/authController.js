@@ -53,7 +53,7 @@ const login = async (req, res) => {
         id: existUser._id,
       },
       process.env.JWT_SECRET,
-      { expiresIn: 60 * 60 }
+      { expiresIn: 60 * 60}
     );
     res.status(200).json({
       status: "success",

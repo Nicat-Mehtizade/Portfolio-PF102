@@ -103,10 +103,30 @@ const addComment = async (req, res) => {
   }
 };
 
+const getCommentsByBlogId = async (req, res) => {
+  const { blogId } = req.params;
+  try {
+    const comments = await Comment.find({ blogId }).populate("authorId", "username");
+
+    if (comments.length === 0) {
+      return res.status(404).json({ message: "No comments found for this blog!" });
+    }
+
+    res.status(200).json({
+      data: comments,
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: error.message,
+    });
+  }
+};
+
 module.exports = {
   getAllComments,
   getCommentById,
   deleteComment,
   addComment,
   editComment,
+  getCommentsByBlogId
 };

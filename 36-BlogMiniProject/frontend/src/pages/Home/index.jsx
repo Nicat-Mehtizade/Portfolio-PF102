@@ -9,10 +9,15 @@ import { BsThreeDots } from "react-icons/bs";
 import { FaPlus } from "react-icons/fa6";
 import { NavLink, useNavigate } from "react-router-dom";
 import { SlNote } from "react-icons/sl";
+import { jwtDecode } from "jwt-decode";
+import toast, { Toaster } from "react-hot-toast";
 
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+  const decoded = token ? jwtDecode(token) : null;
+  console.log(decoded);
   const getAllBlogs = async () => {
     try {
       const response = await axios(`${BASE_URL}/blogs`);
@@ -30,24 +35,67 @@ const Home = () => {
   const handleDetails = (id) => {
     navigate(`/blogs/${id}`);
   };
+
+  const handleAddBlog = () => {
+    if (decoded.role == "user") {
+      toast.error(
+        "You do not have access to add blogs. Only authors can add them.",
+        {
+          duration: 2000,
+        }
+      );
+    } else {
+      navigate("/new");
+    }
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      const response = await axios.delete(`${BASE_URL}/blogs/${id}`,{
+        headers: {
+          Authorization: `${token}`
+        }
+      });
+
+      toast.success("Blog deleted successfully!", {
+        duration: 2000,
+      });
+      getAllBlogs()
+    } catch (error) {
+      console.log(error);
+      toast.error("An error occurred while deleting the blog. Please try again.", {
+        duration: 2000,
+      });
+    }
+  };
+
   return (
     <div>
+      <Toaster position="top-center" reverseOrder={false} />
       <div className="max-w-[1380px] mx-auto">
         <div className="flex gap-15">
           <div className="lg:w-[60%] mx-10 lg:ml-30  py-10">
             <div className="flex border-b-1 border-gray-300 justify-between font-semibold mb-10 text-sm items-center text-gray-500">
               <div className="flex items-center gap-4 md:gap-7">
-              <FaPlus />
-            <p className="text-black border-b-1 py-5">For you</p>
-            <p>Following</p>
-            <p className="hidden sm:block">Featured <span className="text-white bg-green-700 p-0.5 rounded-sm text-xs">New</span></p>
-            <p className="hidden sm:block">React</p>
-            <p className="hidden sm:block">Coding</p>
+                <FaPlus />
+                <p className="text-black border-b-1 py-5">For you</p>
+                <p>Following</p>
+                <p className="hidden sm:block">
+                  Featured{" "}
+                  <span className="text-white bg-green-700 p-0.5 rounded-sm text-xs">
+                    New
+                  </span>
+                </p>
+                <p className="hidden sm:block">React</p>
+                <p className="hidden sm:block">Coding</p>
               </div>
-              <div className="flex items-center gap-2 cursor-pointer">
-                <SlNote className="text-xl text-gray-500" />
-                <p className="text-gray-500">Write</p>
-              </div>
+              <button
+                onClick={handleAddBlog}
+                className="flex items-center gap-2 cursor-pointer group"
+              >
+                <SlNote className="text-xl text-gray-500 group-hover:text-black" />
+                <p className="text-gray-500 group-hover:text-black">Write</p>
+              </button>
             </div>
             {blogs ? (
               blogs.map((blog) => {
@@ -57,7 +105,7 @@ const Home = () => {
                     className="border-b-1 py-5 cursor-pointer border-gray-200"
                     key={blog._id}
                   >
-                    <div className="flex gap-5 items-center ">
+                    <div className="flex gap-5 items-center justify-between ">
                       <div className="flex flex-col gap-2">
                         <h1 className="font-bold text-lg md:text-2xl lg:w-[85%]">
                           {blog.title.length > 50
@@ -90,7 +138,17 @@ const Home = () => {
                         </div>
                       </div>
                       <div className="text-gray-500 flex gap-1 md:gap-4 text-2xl">
-                        <CiCircleMinus className="cursor-pointer hover:text-black" />
+                        <button
+                          className={
+                            decoded.id == blog.author._id ? "block" : "hidden"
+                          }
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleDelete(blog._id);
+                          }}
+                        >
+                          <CiCircleMinus className="cursor-pointer hover:text-black" />
+                        </button>
                         <MdOutlineBookmarkAdd className="cursor-pointer hover:text-black" />
                         <BsThreeDots className="cursor-pointer hover:text-black" />
                       </div>

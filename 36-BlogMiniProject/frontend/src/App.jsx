@@ -9,6 +9,8 @@ import AdminLayout from "./layout/Admin";
 import AdminBlog from "./pages/AdminBlog";
 import Details from "./pages/Details";
 import About from "./pages/About";
+import AddPostPage from "./pages/AddPost";
+import Contact from "./pages/Contact";
 function App() {
   return (
     <>
@@ -20,11 +22,13 @@ function App() {
 
         <Route path="/" element={<ClientLayout />}>
           <Route index element={<Home />} />
-          <Route path="/blogs/:id" element={<Details/>}/>
+          <Route path="/blogs/:id" element={<Details />} />
+          <Route path="/new" element={<AddPostPage />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
-        <Route path="/about" element={<About/>}/>
-        
-        <Route path="/" element={<PrivateRoute roles={["admin"]} />} >
+        <Route path="/about" element={<About />} />
+
+        <Route path="/" element={<PrivateRoute roles={["admin"]} />}>
           <Route path="admin" element={<AdminLayout />}>
             <Route path="blog" element={<AdminBlog />} />
           </Route>

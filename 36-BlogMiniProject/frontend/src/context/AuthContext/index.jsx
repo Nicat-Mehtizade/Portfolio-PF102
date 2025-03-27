@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export const AuthContext=createContext(null)
 
 const AuthProvider=({children})=>{
-    const [token,setToken]=useState("")
+    const [token,setToken]=useState(null)
     const navigate = useNavigate();
     useEffect(() => {
         const checkTokenExpiration = () => {
@@ -16,7 +16,7 @@ const AuthProvider=({children})=>{
           } else {
             localStorage.removeItem("token");
             localStorage.removeItem("tokenExpiredDate");
-            setToken("");
+            setToken(null);
             navigate("/login")
           }
         };

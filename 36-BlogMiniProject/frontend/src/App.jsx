@@ -3,14 +3,18 @@ import "./App.css";
 import Signup from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
-import PrivateRoute from "./companents/PriveteRoute";
+import PrivateRoute from "./companents/PrivateRoute";
 import ClientLayout from "./layout/Client";
 import AdminLayout from "./layout/Admin";
-import AdminBlog from "./pages/AdminBlog";
 import Details from "./pages/Details";
 import About from "./pages/About";
 import AddPostPage from "./pages/AddPost";
 import Contact from "./pages/Contact";
+import Dashboard from "./pages/DashBoard";
+import AdminBlog from "./pages/AdminBlog";
+import AdminUsers from "./pages/AdminUsers";
+import AdminComments from "./pages/AdminComments"
+
 function App() {
   return (
     <>
@@ -28,9 +32,12 @@ function App() {
         </Route>
         <Route path="/about" element={<About />} />
 
-        <Route path="/" element={<PrivateRoute roles={["admin"]} />}>
+        <Route element={<PrivateRoute roles={["admin"]} />}>
           <Route path="admin" element={<AdminLayout />}>
+            <Route index element={<Dashboard />} />
             <Route path="blog" element={<AdminBlog />} />
+            <Route path="users" element={<AdminUsers />} />
+            <Route path="comments" element={<AdminComments />} />
           </Route>
         </Route>
       </Routes>

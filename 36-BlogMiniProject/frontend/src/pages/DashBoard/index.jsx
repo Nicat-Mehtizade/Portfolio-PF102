@@ -65,7 +65,7 @@ const Dashboard = () => {
         transition={{ delay: 0.8, duration: 0.5, ease: "easeOut" }}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 py-10 "
       >
-        <div className="border border-gray-300 p-6 flex rounded-lg  justify-between">
+        <div className="border border-gray-300 p-6 flex rounded-lg  justify-between transition duration-300 hover:-translate-y-2 hover:shadow-xl">
           <div>
             <p className="font-medium text-gray-500">Total Blogs</p>
             <p className="text-2xl font-bold mb-1">{blogs.length}</p>
@@ -76,7 +76,7 @@ const Dashboard = () => {
             <p className="text-xs font-medium">+12.5%</p>
           </div>
         </div>
-        <div className="border border-gray-300 p-6 flex rounded-lg  justify-between">
+        <div className="border border-gray-300 p-6 flex rounded-lg  justify-between transition duration-300 hover:-translate-y-2 hover:shadow-xl">
           <div>
             <p className="font-medium text-gray-500">Total Users</p>
             <p className="text-2xl font-bold mb-1">{users.length}</p>
@@ -87,7 +87,7 @@ const Dashboard = () => {
             <p className="text-xs font-medium">+18.2%</p>
           </div>
         </div>
-        <div className="border border-gray-300 p-6 flex rounded-lg  justify-between">
+        <div className="border border-gray-300 p-6 flex rounded-lg  justify-between transition duration-300 hover:-translate-y-2 hover:shadow-xl">
           <div>
             <p className="font-medium text-gray-500">Engagement Rate</p>
             <p className="text-2xl font-bold mb-1">5.2%</p>
@@ -98,7 +98,7 @@ const Dashboard = () => {
             <p className="text-xs font-medium">-2.1%</p>
           </div>
         </div>
-        <div className="border border-gray-300 p-6 flex rounded-lg  justify-between">
+        <div className="border border-gray-300 p-6 flex rounded-lg  justify-between transition duration-300 hover:-translate-y-2 hover:shadow-xl">
           <div>
             <p className="font-medium text-gray-500">Avg. Read Time</p>
             <p className="text-2xl font-bold mb-1">4m 32s</p>
@@ -146,6 +146,7 @@ const Dashboard = () => {
           referrerpolicy="no-referrer-when-downgrade"
         ></motion.iframe>
       </div>
+
     </div>
   );
 };

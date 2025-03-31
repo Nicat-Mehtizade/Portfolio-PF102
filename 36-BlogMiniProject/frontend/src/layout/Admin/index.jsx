@@ -128,7 +128,7 @@ const AdminLayout = () => {
           <div className="flex border-b-1 border-gray-200 justify-end py-3 px-5 gap-4">
             <button className="text-2xl border p-2 border-gray-300 rounded-lg"><IoIosNotificationsOutline/></button>
             <div className="flex items-center gap-2">
-              <p className="bg-blue-800 w-10 h-10 text-white rounded-full flex items-center justify-center font-semibold">{decoded.username.slice(0,1).toUpperCase()}</p>
+              <p className="bg-gradient-to-br from-blue-400 to-purple-500 w-10 h-10 text-white rounded-full flex items-center justify-center font-semibold">{decoded.username.slice(0,1).toUpperCase()}</p>
               <div>
                 <p className="font-semibold">{decoded.username}</p>
                 <p className="text-gray-500 text-xs">{decoded.role.slice(0,1).toUpperCase().concat(decoded.role.slice(1))}</p>

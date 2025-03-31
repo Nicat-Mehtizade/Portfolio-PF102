@@ -16,6 +16,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
 import { useSpring, animated } from "@react-spring/web";
+import { motion } from "framer-motion";
 
 const Fade = React.forwardRef(function Fade(props, ref) {
   const {
@@ -150,15 +151,30 @@ const AdminBlog = () => {
 
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold mb-2">Blog Management</h1>
-      <p className="text-gray-500">
+      <motion.h1
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
+        className="text-3xl font-bold mb-2"
+      >
+        Blog Management
+      </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
+        className="text-gray-500"
+      >
         Manage and monitor all blog posts on your platform
-      </p>
+      </motion.p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 py-10">
         {blogs &&
           blogs.map((blog) => {
             return (
-              <div
+              <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.5, ease: "easeOut" }}
                 key={blog._id}
                 className="shadow-xl rounded-lg overflow-hidden flex flex-col h-[410px] transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
               >
@@ -206,7 +222,7 @@ const AdminBlog = () => {
                     </button>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
       </div>

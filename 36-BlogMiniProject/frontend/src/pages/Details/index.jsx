@@ -13,6 +13,7 @@ import { AiOutlineSafety } from "react-icons/ai";
 import { jwtDecode } from "jwt-decode";
 import toast, { Toaster } from "react-hot-toast";
 import { TiDelete } from "react-icons/ti";
+import { format } from "date-fns";
 
 const Details = () => {
   const { id } = useParams();
@@ -109,21 +110,19 @@ const Details = () => {
     }
   };
 
-  const handleDeleteComment=async(id)=>{
+  const handleDeleteComment = async (id) => {
     try {
-      const response=await axios.delete(`${BASE_URL}/comments/${id}`,
-        {
-          headers:{
-            Authorization: `${token}`
-          }
-        }
-      )
+      const response = await axios.delete(`${BASE_URL}/comments/${id}`, {
+        headers: {
+          Authorization: `${token}`,
+        },
+      });
       console.log(response.data);
       getAllComments();
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   return (
     <div>
@@ -152,9 +151,7 @@ const Details = () => {
                   <LuDot />
                 </span>
                 <p className="text-gray-600 font-medium">
-                  {blog.date
-                    ? new Date(blog.date).toISOString().split("T")[0]
-                    : "No date available"}
+                  {format(new Date(blog.date), "MMM dd, yyyy")}
                 </p>
               </div>
             </div>
@@ -235,7 +232,12 @@ const Details = () => {
                     </div>
                   </div>
                   <div className="flex gap-2 items-center">
-                    {comment.authorId._id==decoded.id &&<TiDelete onClick={()=>handleDeleteComment(comment._id)} className="cursor-pointer text-gray-500 text-2xl hover:text-black" /> }
+                    {comment.authorId._id == decoded.id && (
+                      <TiDelete
+                        onClick={() => handleDeleteComment(comment._id)}
+                        className="cursor-pointer text-gray-500 text-2xl hover:text-black"
+                      />
+                    )}
                     <BsThreeDots className="cursor-pointer text-gray-500 text-xl hover:text-black" />
                   </div>
                 </div>

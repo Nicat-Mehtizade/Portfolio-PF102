@@ -3,6 +3,7 @@ import { BsSend } from "react-icons/bs";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const form = useRef();
@@ -16,15 +17,23 @@ const Contact = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          toast.success("Message sent successfully.!", {
+            duration: 2000,
+          });
+          form.current.reset();
         },
         (error) => {
           console.log("FAILED...", error.text);
+          toast.error("There was a problem sending the message, Please try again.",{
+            duration:2000
+        });
         }
       );
   };
 
   return (
     <div className="bg-gradient-to-br from-white to-gray-200 min-h-screen">
+      <Toaster position="top-center" reverseOrder={false} />
       <div className="max-w-[1280px] mx-auto">
         <div className="flex items-center gap-16 justify-center flex-wrap py-10">
           <div className="flex flex-col items-center">

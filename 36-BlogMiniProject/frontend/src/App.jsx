@@ -13,7 +13,6 @@ import Contact from "./pages/Contact";
 import Dashboard from "./pages/DashBoard";
 import AdminBlog from "./pages/AdminBlog";
 import AdminUsers from "./pages/AdminUsers";
-import AdminComments from "./pages/AdminComments"
 
 function App() {
   return (
@@ -37,7 +36,6 @@ function App() {
             <Route index element={<Dashboard />} />
             <Route path="blog" element={<AdminBlog />} />
             <Route path="users" element={<AdminUsers />} />
-            <Route path="comments" element={<AdminComments />} />
           </Route>
         </Route>
       </Routes>

@@ -11,23 +11,30 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { SlNote } from "react-icons/sl";
 import { jwtDecode } from "jwt-decode";
 import toast, { Toaster } from "react-hot-toast";
-
+import { format } from "date-fns";
+import { BsBookmarkPlus } from "react-icons/bs";
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
+  const [popularBlog, setPopularBlog] = useState([]);
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
   const decoded = token ? jwtDecode(token) : null;
-  console.log(decoded);
+  // console.log(decoded);
   const getAllBlogs = async () => {
     try {
       const response = await axios(`${BASE_URL}/blogs`);
       setBlogs(response.data.data);
+
+      const sortedBlogs = response.data.data.toSorted(
+        (a, b) => b.likes.length - a.likes.length
+      );
+      setPopularBlog(sortedBlogs.slice(0, 3));
     } catch (error) {
       console.log(error);
     }
   };
-  console.log(blogs);
-
+  // console.log(blogs);
+  console.log(popularBlog);
   useEffect(() => {
     getAllBlogs();
   }, []);
@@ -51,23 +58,36 @@ const Home = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`${BASE_URL}/blogs/${id}`,{
+      const response = await axios.delete(`${BASE_URL}/blogs/${id}`, {
         headers: {
-          Authorization: `${token}`
-        }
+          Authorization: `${token}`,
+        },
       });
 
       toast.success("Blog deleted successfully!", {
         duration: 2000,
       });
-      getAllBlogs()
+      getAllBlogs();
     } catch (error) {
       console.log(error);
-      toast.error("An error occurred while deleting the blog. Please try again.", {
-        duration: 2000,
-      });
+      toast.error(
+        "An error occurred while deleting the blog. Please try again.",
+        {
+          duration: 2000,
+        }
+      );
     }
   };
+
+  const topics = [
+    "Data Science",
+    "Self Improvement",
+    "Technology",
+    "Writing",
+    "Relationships",
+    "Cryptocurrency",
+    "Politics",
+  ];
 
   return (
     <div>
@@ -127,7 +147,7 @@ const Home = () => {
                         <div className="flex items-center gap-3">
                           <PiStarFourFill className="text-yellow-400" />
                           <span className="text-gray-500 text-sm">
-                            {new Date(blog.date).toISOString().split("T")[0]}
+                          {format(new Date(blog.date), "MMM dd, yyyy")}
                           </span>
                         </div>
                         <div className="flex gap-1 items-center">
@@ -160,7 +180,134 @@ const Home = () => {
               <p>There is no blog,yet!</p>
             )}
           </div>
-          <div className="hidden lg:block border-l-1 border-gray-200 w-[35%]"></div>
+          <div className="hidden lg:block border-l-1 border-gray-200 w-[35%]">
+            <h1 className="font-bold text-2xl py-5 px-7">Most Popular Blogs</h1>
+            {popularBlog.map((blog) => {
+              return (
+                <div
+                  onClick={() => handleDetails(blog._id)}
+                  className="py-3 px-7 flex flex-col gap-3 cursor-pointer"
+                  key={blog._id}
+                >
+                  <div className="flex gap-1">
+                    <p className="bg-blue-500 text-white font-bold rounded-full text-sm px-1 flex items-center justify-center">
+                      {blog.author.username.slice(0, 1).toUpperCase()}
+                    </p>
+                    <p className="text-sm hover:underline">
+                      {blog.author.username}
+                    </p>
+                  </div>
+                  <h1 className="font-bold text-lg">{blog.title}</h1>
+                  <div className="flex gap-3">
+                    <p className="text-gray-500">
+                      {format(new Date(blog.date), "MMM, dd")}
+                    </p>
+                    <div className="flex gap-1 items-center">
+                      <PiHandsClapping className="text-gray-600" />
+                      <span className="text-gray-500">{blog.likes.length}</span>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+            <p className="text-gray-500 text-sm px-7 cursor-pointer font-semibold hover:underline mb-5">
+              See the full list
+            </p>
+            <div>
+              <h1 className="font-semibold text-lg px-7 py-1 mb-3">
+                Recommended topics
+              </h1>
+              <div className="flex flex-wrap gap-3 px-7 mb-4">
+                {topics.map((topic) => (
+                  <p className="bg-gray-100 py-2 text-sm px-4 rounded-full font-medium cursor-pointer">
+                    {topic}
+                  </p>
+                ))}
+              </div>
+              <p className="text-gray-500 px-7 text-sm cursor-pointer font-semibold hover:underline mb-5">
+                See more topics
+              </p>
+            </div>
+            <div className="px-7 py-3">
+              <h1 className="font-semibold mb-5">Who to follow</h1>
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  className="rounded-full w-9"
+                  src="https://miro.medium.com/v2/resize:fill:60:60/1*AgkC3EIuY6TgqPe3kWr59w.jpeg"
+                  alt=""
+                />
+                <div>
+                  <h1 className="font-bold">Coders Stop</h1>
+                  <p className="text-xs text-gray-500">
+                    Software Engineer 💻. I help people to get better every
+                    da...
+                  </p>
+                </div>
+                <button className="border rounded-full py-1 text-sm cursor-pointer px-3">
+                  Follow
+                </button>
+              </div>
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  className="rounded-full w-9"
+                  src="https://miro.medium.com/v2/resize:fill:176:176/1*cwlpT_-EPnUAgQxQRVZAvQ.png"
+                  alt=""
+                />
+                <div>
+                  <h1 className="font-bold">The Pythoneers</h1>
+                  <p className="text-xs text-gray-500">
+                    Your home for innovative tech stories about Python and
+                    its....
+                  </p>
+                </div>
+                <button className="border rounded-full py-1 text-sm cursor-pointer px-3">
+                  Follow
+                </button>
+              </div>
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  className="rounded-full w-9"
+                  src="https://miro.medium.com/v2/resize:fill:110:110/1*f1ckfFZTi4jOIEO6ZPO8CQ.jpeg"
+                  alt=""
+                />
+                <div>
+                  <h1 className="font-bold">Jan Kammerath</h1>
+                  <p className="text-xs text-gray-500">
+                    I love technology, programming, computers.....
+                  </p>
+                </div>
+                <button className="border rounded-full py-1 text-sm cursor-pointer px-3">
+                  Follow
+                </button>
+              </div>
+              <p className="text-gray-500 text-sm cursor-pointer font-semibold hover:underline mb-5">
+                See more suggestions
+              </p>
+            </div>
+            <div className="px-7">
+              <h1 className="text-lg font-semibold mb-2">Reading list</h1>
+              <div className="mb-4">
+                <p className="text-gray-600 text-sm leading-relaxed font-semibold">
+                  Click the{" "}
+                  <BsBookmarkPlus className="inline mx-1 text-lg text-gray-700" />{" "}
+                  on any story to easily add it to your reading list or a custom
+                  list that you can share.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-2 text-[11px] px-7 text-gray-500 flex-wrap w-[80%]">
+              <p className="cursor-pointer">Help</p>
+              <p className="cursor-pointer">Status</p>
+              <p className="cursor-pointer">About</p>
+              <p className="cursor-pointer">Careers</p>
+              <p className="cursor-pointer">Press</p>
+              <p className="cursor-pointer">Blog</p>
+              <p className="cursor-pointer">Privacy</p>
+              <p className="cursor-pointer">Rules</p>
+              <p className="cursor-pointer">Terms</p>
+              <p className="cursor-pointer">Text to speech</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

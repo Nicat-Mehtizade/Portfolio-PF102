@@ -11,8 +11,8 @@ import { jwtDecode } from "jwt-decode";
 
 const AdminLayout = () => {
   const [isOpened, setIsOpened] = useState(true);
-  const token=localStorage.getItem("token")
-  const decoded= token? jwtDecode(token) : null
+  const token = localStorage.getItem("token");
+  const decoded = token ? jwtDecode(token) : null;
 
   return (
     <div className="flex h-screen bg-gray-50">
@@ -32,7 +32,8 @@ const AdminLayout = () => {
         </div>
         <div className="flex flex-col gap-3 mt-4 px-2">
           <NavLink
-            to="/admin" end
+            to="/admin"
+            end
             className={({ isActive }) =>
               `flex items-center px-4 py-2 text-lg rounded-md cursor-pointer transition-all hover:scale-105 ${
                 isActive ? "bg-black text-white" : "hover:bg-gray-200"
@@ -50,7 +51,8 @@ const AdminLayout = () => {
           </NavLink>
 
           <NavLink
-            to="/admin/blog" end
+            to="/admin/blog"
+            end
             className={({ isActive }) =>
               `flex items-center px-4 py-2 text-lg rounded-md cursor-pointer transition-all hover:scale-105 ${
                 isActive ? "bg-black text-white" : "hover:bg-gray-200"
@@ -66,7 +68,8 @@ const AdminLayout = () => {
               Blogs
             </span>
           </NavLink>
-          <NavLink end
+          <NavLink
+            end
             to="/admin/users"
             className={({ isActive }) =>
               `flex items-center px-4 py-2 text-lg rounded-md cursor-pointer transition-all hover:scale-105 ${
@@ -83,24 +86,6 @@ const AdminLayout = () => {
               Users
             </span>
           </NavLink>
-          <NavLink end
-            to="/admin/comments"
-            className={({ isActive }) =>
-              `flex items-center px-4 py-2 text-lg rounded-md cursor-pointer transition-all hover:scale-105 ${
-                isActive ? "bg-black text-white" : "hover:bg-gray-200"
-              }`
-            }
-          >
-            <GoComment className="text-xl  min-w-[20px]" />
-            <span
-              className={`ml-3 transition-opacity duration-200 whitespace-nowrap ${
-                isOpened ? "opacity-100 visible" : "opacity-0 invisible"
-              }`}
-            >
-              Comments
-            </span>
-          </NavLink>
-
           <div className="flex items-center px-4 py-2 text-lg hover:bg-gray-200 rounded-md cursor-pointer transition-all hover:scale-105">
             <IoIosNotificationsOutline className="text-xl  min-w-[20px]" />
             <span
@@ -126,12 +111,21 @@ const AdminLayout = () => {
       <div className="flex-1 overflow-auto">
         <div>
           <div className="flex border-b-1 border-gray-200 justify-end py-3 px-5 gap-4">
-            <button className="text-2xl border p-2 border-gray-300 rounded-lg"><IoIosNotificationsOutline/></button>
+            <button className="text-2xl border p-2 border-gray-300 rounded-lg">
+              <IoIosNotificationsOutline />
+            </button>
             <div className="flex items-center gap-2">
-              <p className="bg-gradient-to-br from-blue-400 to-purple-500 w-10 h-10 text-white rounded-full flex items-center justify-center font-semibold">{decoded.username.slice(0,1).toUpperCase()}</p>
+              <p className="bg-gradient-to-br from-blue-400 to-purple-500 w-10 h-10 text-white rounded-full flex items-center justify-center font-semibold">
+                {decoded.username.slice(0, 1).toUpperCase()}
+              </p>
               <div>
                 <p className="font-semibold">{decoded.username}</p>
-                <p className="text-gray-500 text-xs">{decoded.role.slice(0,1).toUpperCase().concat(decoded.role.slice(1))}</p>
+                <p className="text-gray-500 text-xs">
+                  {decoded.role
+                    .slice(0, 1)
+                    .toUpperCase()
+                    .concat(decoded.role.slice(1))}
+                </p>
               </div>
             </div>
           </div>
